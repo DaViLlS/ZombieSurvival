@@ -1,0 +1,72 @@
+using InputActions;
+using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace Assets._Project.Scripts.PlayerInput
+{
+    public class InputHandler : MonoBehaviour
+    {
+        public event Action OnJumpPerformed;
+        public event Action OnMovementPerformed;
+        public event Action OnMovementCancelled;
+        public event Action OnShiftPerformed;
+        public event Action OnShiftCancelled;
+
+        private PlayerInputActions _inputActions;
+        private float _mouseXAxis;
+        private float _mouseYAxis;
+
+        public float MouseXAxis => _mouseXAxis;
+        public float MouseYAxis => _mouseYAxis;
+        public Vector2 MovementVector => _inputActions.Player.Movement.ReadValue<Vector2>();
+
+        private void Start()
+        {
+            _inputActions = new PlayerInputActions();
+            _inputActions.Enable();
+
+            _inputActions.Player.Jump.performed += JumpPerformed;
+            _inputActions.Player.Movement.performed += MovementPerformed;
+            _inputActions.Player.Movement.canceled += MovementCancelled;
+            _inputActions.Player.Shift.performed += ShiftPerformed;
+            _inputActions.Player.Shift.canceled += ShiftCancelled;
+        }
+
+        private void Update()
+        {
+            _mouseXAxis = Input.GetAxis("Mouse X");
+            _mouseYAxis = Input.GetAxis("Mouse Y");
+        }
+
+        private void MovementPerformed(InputAction.CallbackContext context)
+        {
+            OnMovementPerformed?.Invoke();
+            Debug.Log("Movement performed");
+        }
+
+        private void MovementCancelled(InputAction.CallbackContext context)
+        {
+            OnMovementCancelled?.Invoke();
+            Debug.Log("Movement cancelled");
+        }
+
+        public void JumpPerformed(InputAction.CallbackContext context)
+        {
+            OnJumpPerformed?.Invoke();
+            Debug.Log("Jump performed");
+        }
+
+        public void ShiftPerformed(InputAction.CallbackContext context)
+        {
+            OnShiftPerformed?.Invoke();
+            Debug.Log("Shift performed");
+        }
+
+        public void ShiftCancelled(InputAction.CallbackContext context)
+        {
+            OnShiftCancelled?.Invoke();
+            Debug.Log("Shift cancelled");
+        }
+    }
+}
