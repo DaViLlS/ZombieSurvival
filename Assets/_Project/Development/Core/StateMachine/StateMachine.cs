@@ -1,24 +1,34 @@
-using System.Collections.Generic;
-using System;
 using UnityEngine;
 
-public class StateMachine : MonoBehaviour
+public abstract class StateMachine : MonoBehaviour
 {
     protected IState _currentState;
-    protected Dictionary<StateType, IState> _stateHandlers;
 
-    public StateMachine(IState currentState, Dictionary<StateType, IState> stateHandlers)
+    public abstract void Initialize();
+
+    public void ChangeState(IState nextState)
     {
-        _currentState = currentState;
-        _stateHandlers = stateHandlers;
+        _currentState?.OnExitState();
+        _currentState = nextState;
+        _currentState.OnEnterState();
     }
 
     private void Update()
     {
-        TriggerEvent();
+        ExecuteState();
     }
 
-    public void TriggerEvent()
+    private void FixedUpdate()
+    {
+        FixedExecuteState();
+    }
+
+    public void FixedExecuteState()
+    {
+        _currentState.FixedExecute();
+    }
+
+    public void ExecuteState()
     {
         _currentState.Execute();
     }

@@ -214,7 +214,8 @@ GameObject:
   - component: {fileID: 388263926}
   - component: {fileID: 388263925}
   - component: {fileID: 388263924}
-  - component: {fileID: 388263929}
+  - component: {fileID: 388263930}
+  - component: {fileID: 388263931}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -331,14 +332,14 @@ Transform:
   m_GameObject: {fileID: 388263923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1451971517}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &388263929
+--- !u!114 &388263930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,14 +348,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 388263923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1835f61a547496b499dc13689233704a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a69b856e80fdb844a5279cce85e2422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 388263924}
-  speed: 3
-  shiftSpeed: 5
-  jumpForce: 5
-  rotationSensitivity: 2
+  stateMachine: {fileID: 388263931}
+  characterMovementSettings: {fileID: 11400000, guid: 451a8b3c125dc704e82075a37ecc2b08, type: 2}
+--- !u!114 &388263931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388263923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3819a9c2d91f0b489f179bb9123b213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 388263930}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ff02d4aaa2b76489b1454235e5a9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 2
+  character: {fileID: 388263930}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +786,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1718778708}
   - component: {fileID: 1718778710}
-  - component: {fileID: 1718778709}
   - component: {fileID: 1718778711}
   m_Layer: 0
   m_Name: HandsCamera
@@ -798,14 +809,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 963194228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1718778709
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718778707}
-  m_Enabled: 1
 --- !u!20 &1718778710
 Camera:
   m_ObjectHideFlags: 0

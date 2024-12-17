@@ -12,7 +12,6 @@ namespace Assets._Project.Scripts.MainCharacter.Test
         [SerializeField] private float speed;
         [SerializeField] private float shiftSpeed;
         [SerializeField] private float jumpForce;
-        [SerializeField] private float rotationSensitivity = 2f;
 
         private bool _canMove;
         private bool _isGrounded;
