@@ -21,7 +21,7 @@ public class FirstPersonCamera : MonoBehaviour
         _rotationX -= _inputHandler.MouseYAxis;
         _rotationX = Mathf.Clamp(_rotationX, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(_rotationX, _rotationY, 0f);
+        transform.localRotation = Quaternion.Euler(_rotationX, 0f, 0f);
 
         _rotationY += _inputHandler.MouseXAxis;
         character.transform.localRotation = Quaternion.Euler(0f, _rotationY, 0f);

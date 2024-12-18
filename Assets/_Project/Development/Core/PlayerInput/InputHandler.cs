@@ -16,10 +16,12 @@ namespace Assets._Project.Scripts.PlayerInput
         private PlayerInputActions _inputActions;
         private float _mouseXAxis;
         private float _mouseYAxis;
+        private bool _isMovementPerformed;
 
         public float MouseXAxis => _mouseXAxis;
         public float MouseYAxis => _mouseYAxis;
         public Vector2 MovementVector => _inputActions.Player.Movement.ReadValue<Vector2>();
+        public bool IsMovementPerformed => _isMovementPerformed;
 
         private void Start()
         {
@@ -41,12 +43,14 @@ namespace Assets._Project.Scripts.PlayerInput
 
         private void MovementPerformed(InputAction.CallbackContext context)
         {
+            _isMovementPerformed = true;
             OnMovementPerformed?.Invoke();
             Debug.Log("Movement performed");
         }
 
         private void MovementCancelled(InputAction.CallbackContext context)
         {
+            _isMovementPerformed = false;
             OnMovementCancelled?.Invoke();
             Debug.Log("Movement cancelled");
         }

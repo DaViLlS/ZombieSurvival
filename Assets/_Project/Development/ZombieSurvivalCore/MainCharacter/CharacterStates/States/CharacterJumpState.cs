@@ -1,18 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterJumpState : MonoBehaviour
+public class CharacterJumpState : IState
 {
-    // Start is called before the first frame update
-    void Start()
+    private CharacterStateMachine _stateMachine;
+    private float _currentSpeed;
+
+    private Rigidbody Rigidbody => _stateMachine.Character.Rigidbody;
+    private Transform Transform => _stateMachine.Character.transform;
+
+    public CharacterJumpState(CharacterStateMachine stateMachine)
     {
-        
+        _stateMachine = stateMachine;
+        _currentSpeed = _stateMachine.Character.MovementSettings.Speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnEnterState()
     {
-        
+        Rigidbody.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        _stateMachine.Character.OnCharacterGrounded += OnCharacterGrounded;
+    }
+
+    public void OnExitState()
+    {
+        _stateMachine.Character.OnCharacterGrounded -= OnCharacterGrounded;
+    }
+
+    private void OnCharacterGrounded()
+    {
+        if (_stateMachine.InputHandler.IsMovementPerformed)
+        {
+            _stateMachine.ChangeStateByType(CharacterStateType.Move);
+        }
+        else
+        {
+            _stateMachine.ChangeStateByType(CharacterStateType.Idle);
+        }
+    }
+
+    public void Execute()
+    {
+    }
+
+    public void FixedExecute()
+    {
+        var moveDirection = Transform.forward * _stateMachine.InputHandler.MovementVector.y + Transform.right * _stateMachine.InputHandler.MovementVector.x;
+        Rigidbody.velocity = moveDirection * _currentSpeed + new Vector3(0f, Rigidbody.velocity.y, 0f);
     }
 }

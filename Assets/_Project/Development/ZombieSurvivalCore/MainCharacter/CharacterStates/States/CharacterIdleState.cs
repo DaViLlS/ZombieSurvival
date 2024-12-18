@@ -7,24 +7,25 @@ public class CharacterIdleState : IState
         _stateMachine = stateMachine;
     }
 
-    public void Execute()
-    {
-        
-    }
-
-    public void FixedExecute()
-    {
-        
-    }
-
     public void OnEnterState()
     {
         _stateMachine.InputHandler.OnMovementPerformed += OnMovementPerformed;
+        _stateMachine.InputHandler.OnJumpPerformed += OnJumpPerformed;
     }
 
     public void OnExitState()
     {
         _stateMachine.InputHandler.OnMovementPerformed -= OnMovementPerformed;
+        _stateMachine.InputHandler.OnJumpPerformed -= OnJumpPerformed;
+    }
+
+    public void Execute() { }
+
+    public void FixedExecute() { }
+
+    private void OnJumpPerformed()
+    {
+        _stateMachine.ChangeStateByType(CharacterStateType.Jump);
     }
 
     private void OnMovementPerformed()

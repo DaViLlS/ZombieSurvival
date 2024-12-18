@@ -22,6 +22,8 @@ public class CharacterStateMachine : StateMachine
         {
             { CharacterStateType.Idle, new CharacterIdleState(this) },
             { CharacterStateType.Move, new CharacterMovementState(this) },
+            { CharacterStateType.Jump, new CharacterJumpState(this) },
+            { CharacterStateType.Shift, new CharacterRunState(this) }
         };
 
         ChangeStateByType(CharacterStateType.Idle);
