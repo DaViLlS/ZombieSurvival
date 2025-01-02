@@ -20,8 +20,6 @@ namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates
 
         public override void Initialize()
         {
-            gameObject.SetActive(true);
-
             _stateHandlers = new Dictionary<CharacterStateType, IState>()
             {
                 { CharacterStateType.Idle, new CharacterIdleState(this) },

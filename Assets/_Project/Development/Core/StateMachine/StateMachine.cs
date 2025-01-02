@@ -4,7 +4,9 @@ namespace _Project.Development.Core.StateMachine
 {
     public abstract class StateMachine : MonoBehaviour
     {
-        protected IState _currentState;
+        private IState _currentState;
+        
+        public IState CurrentState => _currentState;
 
         public abstract void Initialize();
 
