@@ -1,7 +1,10 @@
-public interface IState
+namespace _Project.Development.Core.StateMachine
 {
-    public void Execute();
-    public void FixedExecute();
-    public void OnEnterState();
-    public void OnExitState();
+    public interface IState
+    {
+        public void Execute();
+        public void FixedExecute();
+        public void OnEnterState();
+        public void OnExitState();
+    }
 }

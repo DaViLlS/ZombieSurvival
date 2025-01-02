@@ -1,29 +1,32 @@
-using Assets._Project.Scripts.PlayerInput;
+using _Project.Development.Core.PlayerInput;
 using UnityEngine;
 using Zenject;
 
-public class FirstPersonCamera : MonoBehaviour
+namespace _Project.Development.ZombieSurvivalCore.Camera
 {
-    [Inject] private InputHandler _inputHandler;
-
-    [SerializeField] private Character character;
-
-    private float _rotationX;
-    private float _rotationY;
-
-    void Start()
+    public class FirstPersonCamera : MonoBehaviour
     {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+        [Inject] private InputHandler _inputHandler;
 
-    private void Update()
-    {
-        _rotationX -= _inputHandler.MouseYAxis;
-        _rotationX = Mathf.Clamp(_rotationX, -90f, 90f);
+        [SerializeField] private Character character;
 
-        transform.localRotation = Quaternion.Euler(_rotationX, 0f, 0f);
+        private float _rotationX;
+        private float _rotationY;
 
-        _rotationY += _inputHandler.MouseXAxis;
-        character.transform.localRotation = Quaternion.Euler(0f, _rotationY, 0f);
+        void Start()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        private void Update()
+        {
+            _rotationX -= _inputHandler.MouseYAxis;
+            _rotationX = Mathf.Clamp(_rotationX, -90f, 90f);
+
+            transform.localRotation = Quaternion.Euler(_rotationX, 0f, 0f);
+
+            _rotationY += _inputHandler.MouseXAxis;
+            character.transform.localRotation = Quaternion.Euler(0f, _rotationY, 0f);
+        }
     }
 }

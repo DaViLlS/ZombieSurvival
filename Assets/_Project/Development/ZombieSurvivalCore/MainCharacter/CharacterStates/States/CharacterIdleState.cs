@@ -1,3 +1,5 @@
+using _Project.Development.Core.StateMachine;
+
 namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.States
 {
     public class CharacterIdleState : IState

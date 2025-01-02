@@ -1,14 +1,17 @@
-using Assets._Project.Scripts.PlayerInput;
+using _Project.Development.Core.PlayerInput;
 using UnityEngine;
 using Zenject;
 
-public class InputHandlerInstaller : MonoInstaller
+namespace _Project.Development.ZombieSurvivalCore.Installers
 {
-    [SerializeField] private InputHandler inputHandlerPrefab;
-
-    public override void InstallBindings()
+    public class InputHandlerInstaller : MonoInstaller
     {
-        var inputHandler = Container.InstantiatePrefabForComponent<InputHandler>(inputHandlerPrefab);
-        Container.Bind<InputHandler>().FromInstance(inputHandler).AsSingle();
+        [SerializeField] private InputHandler inputHandlerPrefab;
+
+        public override void InstallBindings()
+        {
+            var inputHandler = Container.InstantiatePrefabForComponent<InputHandler>(inputHandlerPrefab);
+            Container.Bind<InputHandler>().FromInstance(inputHandler).AsSingle();
+        }
     }
 }

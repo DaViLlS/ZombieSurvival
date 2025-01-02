@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        stateMachine.Initialize();
+        Initialize();
     }
 
     public void Initialize()

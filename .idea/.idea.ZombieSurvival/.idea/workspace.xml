@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/PlayerInput/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PlayerInput/InputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/StateMachine/IState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/FirstPersonCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/FirstPersonCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Installers/InputHandlerInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Installers/InputHandlerInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/Character.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/CharacterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/CharacterStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/CharacterStateType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/CharacterStateType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterIdleState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterJumpState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterMovementState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterRunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterRunState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Playground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Playground.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/Test.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/Test/CharacterMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/Test/CharacterMovement.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2r4R3vgjAVUNI4dxzzjRa0617Dk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,6 +40,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,7 +101,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735816172924</updated>
-      <workItem from="1735816180825" duration="1507000" />
+      <workItem from="1735816180825" duration="2005000" />
+      <workItem from="1735818260246" duration="714000" />
     </task>
     <servers />
   </component>

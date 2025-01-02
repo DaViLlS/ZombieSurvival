@@ -1,7 +1,10 @@
-public enum CharacterStateType
+namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates
 {
-    Idle,
-    Move,
-    Jump,
-    Shift
+    public enum CharacterStateType
+    {
+        Idle,
+        Move,
+        Jump,
+        Shift
+    }
 }

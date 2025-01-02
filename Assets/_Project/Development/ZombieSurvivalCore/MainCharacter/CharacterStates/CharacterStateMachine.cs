@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using _Project.Development.Core.PlayerInput;
 using _Project.Development.Core.StateMachine;
 using _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.States;
-using Assets._Project.Scripts.PlayerInput;
 using UnityEngine;
 using Zenject;
 
