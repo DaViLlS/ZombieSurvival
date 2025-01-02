@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates;
 using UnityEngine;
 
 public class CharacterRunState : IState

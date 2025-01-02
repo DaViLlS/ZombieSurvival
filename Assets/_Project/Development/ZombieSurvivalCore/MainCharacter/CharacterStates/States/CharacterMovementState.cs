@@ -1,57 +1,59 @@
-using Assets._Project.Scripts.PlayerInput;
 using UnityEngine;
 
-public class CharacterMovementState : IState
+namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.States
 {
-    private CharacterStateMachine _stateMachine;
-    private float _currentSpeed;
-
-    private Rigidbody Rigidbody => _stateMachine.Character.Rigidbody;
-    private Transform Transform => _stateMachine.Character.transform;
-
-    public CharacterMovementState(CharacterStateMachine stateMachine)
+    public class CharacterMovementState : IState
     {
-        _stateMachine = stateMachine;
-        _currentSpeed = _stateMachine.Character.MovementSettings.Speed;
-    }
+        private CharacterStateMachine _stateMachine;
+        private float _currentSpeed;
 
-    public void OnEnterState()
-    {
-        _stateMachine.InputHandler.OnMovementCancelled += OnMovementCancelled;
-        _stateMachine.InputHandler.OnShiftPerformed += OnShiftPerformed;
-        _stateMachine.InputHandler.OnJumpPerformed += OnJumpPerformed;
-    }
+        private Rigidbody Rigidbody => _stateMachine.Character.Rigidbody;
+        private Transform Transform => _stateMachine.Character.transform;
 
-    public void OnExitState()
-    {
-        _stateMachine.InputHandler.OnMovementCancelled -= OnMovementCancelled;
-        _stateMachine.InputHandler.OnShiftPerformed -= OnShiftPerformed;
-        _stateMachine.InputHandler.OnJumpPerformed -= OnJumpPerformed;
-    }
+        public CharacterMovementState(CharacterStateMachine stateMachine)
+        {
+            _stateMachine = stateMachine;
+            _currentSpeed = _stateMachine.Character.MovementSettings.Speed;
+        }
 
-    private void OnShiftPerformed()
-    {
-        _stateMachine.ChangeStateByType(CharacterStateType.Shift);
-    }
+        public void OnEnterState()
+        {
+            _stateMachine.InputHandler.OnMovementCancelled += OnMovementCancelled;
+            _stateMachine.InputHandler.OnShiftPerformed += OnShiftPerformed;
+            _stateMachine.InputHandler.OnJumpPerformed += OnJumpPerformed;
+        }
 
-    private void OnJumpPerformed()
-    {
-        _stateMachine.ChangeStateByType(CharacterStateType.Jump);
-    }
+        public void OnExitState()
+        {
+            _stateMachine.InputHandler.OnMovementCancelled -= OnMovementCancelled;
+            _stateMachine.InputHandler.OnShiftPerformed -= OnShiftPerformed;
+            _stateMachine.InputHandler.OnJumpPerformed -= OnJumpPerformed;
+        }
 
-    private void OnMovementCancelled()
-    {
-        Rigidbody.velocity = Vector3.zero * _currentSpeed + new Vector3(0f, Rigidbody.velocity.y, 0f);
-        _stateMachine.ChangeStateByType(CharacterStateType.Idle);
-    }
+        private void OnShiftPerformed()
+        {
+            _stateMachine.ChangeStateByType(CharacterStateType.Shift);
+        }
 
-    public void Execute()
-    {
-    }
+        private void OnJumpPerformed()
+        {
+            _stateMachine.ChangeStateByType(CharacterStateType.Jump);
+        }
 
-    public void FixedExecute()
-    {
-        var moveDirection = Transform.forward * _stateMachine.InputHandler.MovementVector.y + Transform.right * _stateMachine.InputHandler.MovementVector.x;
-        Rigidbody.velocity = moveDirection * _currentSpeed + new Vector3(0f, Rigidbody.velocity.y, 0f);
+        private void OnMovementCancelled()
+        {
+            Rigidbody.velocity = Vector3.zero * _currentSpeed + new Vector3(0f, Rigidbody.velocity.y, 0f);
+            _stateMachine.ChangeStateByType(CharacterStateType.Idle);
+        }
+
+        public void Execute()
+        {
+        }
+
+        public void FixedExecute()
+        {
+            var moveDirection = Transform.forward * _stateMachine.InputHandler.MovementVector.y + Transform.right * _stateMachine.InputHandler.MovementVector.x;
+            Rigidbody.velocity = moveDirection * _currentSpeed + new Vector3(0f, Rigidbody.velocity.y, 0f);
+        }
     }
 }

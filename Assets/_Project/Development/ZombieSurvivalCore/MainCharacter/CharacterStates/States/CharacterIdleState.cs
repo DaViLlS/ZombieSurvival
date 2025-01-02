@@ -1,35 +1,38 @@
-public class CharacterIdleState : IState
+namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.States
 {
-    private CharacterStateMachine _stateMachine;
-
-    public CharacterIdleState(CharacterStateMachine stateMachine)
+    public class CharacterIdleState : IState
     {
-        _stateMachine = stateMachine;
-    }
+        private CharacterStateMachine _stateMachine;
 
-    public void OnEnterState()
-    {
-        _stateMachine.InputHandler.OnMovementPerformed += OnMovementPerformed;
-        _stateMachine.InputHandler.OnJumpPerformed += OnJumpPerformed;
-    }
+        public CharacterIdleState(CharacterStateMachine stateMachine)
+        {
+            _stateMachine = stateMachine;
+        }
 
-    public void OnExitState()
-    {
-        _stateMachine.InputHandler.OnMovementPerformed -= OnMovementPerformed;
-        _stateMachine.InputHandler.OnJumpPerformed -= OnJumpPerformed;
-    }
+        public void OnEnterState()
+        {
+            _stateMachine.InputHandler.OnMovementPerformed += OnMovementPerformed;
+            _stateMachine.InputHandler.OnJumpPerformed += OnJumpPerformed;
+        }
 
-    public void Execute() { }
+        public void OnExitState()
+        {
+            _stateMachine.InputHandler.OnMovementPerformed -= OnMovementPerformed;
+            _stateMachine.InputHandler.OnJumpPerformed -= OnJumpPerformed;
+        }
 
-    public void FixedExecute() { }
+        public void Execute() { }
 
-    private void OnJumpPerformed()
-    {
-        _stateMachine.ChangeStateByType(CharacterStateType.Jump);
-    }
+        public void FixedExecute() { }
 
-    private void OnMovementPerformed()
-    {
-        _stateMachine.ChangeStateByType(CharacterStateType.Move);
+        private void OnJumpPerformed()
+        {
+            _stateMachine.ChangeStateByType(CharacterStateType.Jump);
+        }
+
+        private void OnMovementPerformed()
+        {
+            _stateMachine.ChangeStateByType(CharacterStateType.Move);
+        }
     }
 }

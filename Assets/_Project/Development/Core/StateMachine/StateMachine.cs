@@ -1,35 +1,38 @@
 using UnityEngine;
 
-public abstract class StateMachine : MonoBehaviour
+namespace _Project.Development.Core.StateMachine
 {
-    protected IState _currentState;
-
-    public abstract void Initialize();
-
-    public void ChangeState(IState nextState)
+    public abstract class StateMachine : MonoBehaviour
     {
-        _currentState?.OnExitState();
-        _currentState = nextState;
-        _currentState.OnEnterState();
-    }
+        protected IState _currentState;
 
-    private void Update()
-    {
-        ExecuteState();
-    }
+        public abstract void Initialize();
 
-    private void FixedUpdate()
-    {
-        FixedExecuteState();
-    }
+        public void ChangeState(IState nextState)
+        {
+            _currentState?.OnExitState();
+            _currentState = nextState;
+            _currentState.OnEnterState();
+        }
 
-    public void FixedExecuteState()
-    {
-        _currentState.FixedExecute();
-    }
+        private void Update()
+        {
+            ExecuteState();
+        }
 
-    public void ExecuteState()
-    {
-        _currentState.Execute();
+        private void FixedUpdate()
+        {
+            FixedExecuteState();
+        }
+
+        public void FixedExecuteState()
+        {
+            _currentState.FixedExecute();
+        }
+
+        public void ExecuteState()
+        {
+            _currentState.Execute();
+        }
     }
 }

@@ -1,36 +1,41 @@
-using Assets._Project.Scripts.PlayerInput;
 using System.Collections.Generic;
+using _Project.Development.Core.StateMachine;
+using _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.States;
+using Assets._Project.Scripts.PlayerInput;
 using UnityEngine;
 using Zenject;
 
-public class CharacterStateMachine : StateMachine
+namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates
 {
-    [Inject] private InputHandler inputHandler;
-
-    [SerializeField] private Character character;
-
-    private Dictionary<CharacterStateType, IState> _stateHandlers;
-
-    public InputHandler InputHandler => inputHandler;
-    public Character Character => character;
-
-    public override void Initialize()
+    public class CharacterStateMachine : StateMachine
     {
-        gameObject.SetActive(true);
+        [Inject] private InputHandler inputHandler;
 
-        _stateHandlers = new Dictionary<CharacterStateType, IState>()
+        [SerializeField] private Character character;
+
+        private Dictionary<CharacterStateType, IState> _stateHandlers;
+
+        public InputHandler InputHandler => inputHandler;
+        public Character Character => character;
+
+        public override void Initialize()
         {
-            { CharacterStateType.Idle, new CharacterIdleState(this) },
-            { CharacterStateType.Move, new CharacterMovementState(this) },
-            { CharacterStateType.Jump, new CharacterJumpState(this) },
-            { CharacterStateType.Shift, new CharacterRunState(this) }
-        };
+            gameObject.SetActive(true);
 
-        ChangeStateByType(CharacterStateType.Idle);
-    }
+            _stateHandlers = new Dictionary<CharacterStateType, IState>()
+            {
+                { CharacterStateType.Idle, new CharacterIdleState(this) },
+                { CharacterStateType.Move, new CharacterMovementState(this) },
+                { CharacterStateType.Jump, new CharacterJumpState(this) },
+                { CharacterStateType.Shift, new CharacterRunState(this) }
+            };
 
-    public void ChangeStateByType(CharacterStateType characterStateType)
-    {
-        ChangeState(_stateHandlers[characterStateType]);
+            ChangeStateByType(CharacterStateType.Idle);
+        }
+
+        public void ChangeStateByType(CharacterStateType characterStateType)
+        {
+            ChangeState(_stateHandlers[characterStateType]);
+        }
     }
 }
