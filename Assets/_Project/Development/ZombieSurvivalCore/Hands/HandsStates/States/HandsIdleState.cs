@@ -14,8 +14,6 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
         
         public void OnEnterState()
         {
-            Debug.Log("Idle state entered");
-            
             _stateMachine.InputHandler.OnAttackPerformed += OnAttackPerformed;
         }
 

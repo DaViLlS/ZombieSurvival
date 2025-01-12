@@ -11,7 +11,6 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
         private readonly HandsStateMachine _stateMachine;
 
         private Coroutine _waitCoroutine;
-        private bool _isAttackCancelled;
         private float _heavyAttackTime;
         
         public HandsAttackState(HandsStateMachine stateMachine)
@@ -21,11 +20,8 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
         
         public void OnEnterState()
         {
-            Debug.Log("Attack state entered");
-            
             _stateMachine.InputHandler.OnAttackCancelled += OnAttackCancelled;
             _heavyAttackTime = 0f;
-
             _waitCoroutine = _stateMachine.StartCoroutine(WaitAttackRoutine());
         }
 
@@ -34,11 +30,23 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
         private void OnAttackCancelled()
         {
             _stateMachine.InputHandler.OnAttackCancelled -= OnAttackCancelled;
-            
             _stateMachine.StopCoroutine(_waitCoroutine);
 
-            Debug.Log(_heavyAttackTime >= FixedTime ? "Heavy attack" : "Simple attack");
+            if (_heavyAttackTime >= FixedTime)
+            {
+                _stateMachine.HandsController.Weapon.OnAttackEnded += OnAttackEnded;
+                _stateMachine.HandsController.Weapon.HeavyAttack();
+            }
+            else
+            {
+                _stateMachine.HandsController.Weapon.OnAttackEnded += OnAttackEnded;
+                _stateMachine.HandsController.Weapon.SimpleAttack();
+            }
+        }
 
+        private void OnAttackEnded()
+        {
+            _stateMachine.HandsController.Weapon.OnAttackEnded -= OnAttackEnded;
             _stateMachine.ChangeStateByType(HandsStateType.Idle);
         }
 
@@ -50,14 +58,6 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
 
                 _heavyAttackTime += Time.deltaTime;
             }
-        }
-
-        private IEnumerator AttackRoutine()
-        {
-            yield return new WaitForSeconds(1f);
-            
-            Debug.Log("Attacked");
-            _stateMachine.ChangeStateByType(HandsStateType.Idle);
         }
         
         public void Execute() { }

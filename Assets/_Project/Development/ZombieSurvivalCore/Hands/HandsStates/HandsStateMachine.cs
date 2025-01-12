@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using _Project.Development.Core.PlayerInput;
 using _Project.Development.Core.StateMachine;
 using _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States;
+using UnityEngine;
 using Zenject;
 
 namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates
@@ -10,9 +11,12 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates
     {
         [Inject] private InputHandler inputHandler;
         
+        [SerializeField] private HandsController handsController;
+        
         private Dictionary<HandsStateType, IState> _stateHandlers;
         
         public InputHandler InputHandler => inputHandler;
+        public HandsController HandsController => handsController;
         
         public override void Initialize()
         {
