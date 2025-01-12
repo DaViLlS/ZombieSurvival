@@ -18,41 +18,6 @@ namespace _Project.Development.ZombieSurvivalCore.Hands
         public void Initialize()
         {
             stateMachine.Initialize();
-            _inputHandler.OnMovementPerformed += OnMovementPerformed;
-            _inputHandler.OnMovementCancelled += OnMovementCancelled;
-            _inputHandler.OnShiftPerformed += OnShiftPerformed;
-            _inputHandler.OnShiftCancelled += OnShiftCancelled;
-            _inputHandler.OnJumpPerformed += OnJumpPerformed;
-        }
-
-        private void OnMovementPerformed()
-        {
-            weapon.WalkAnimation(true);
-        }
-
-        private void OnMovementCancelled()
-        {
-            weapon.WalkAnimation(false);
-        }
-
-        private void OnShiftPerformed()
-        {
-            weapon.RunAnimation(true);
-        }
-
-        private void OnShiftCancelled()
-        {
-            weapon.RunAnimation(false);
-        }
-
-        private void OnJumpPerformed()
-        {
-            
-        }
-
-        private void OnJumpCancelled()
-        {
-            
         }
     }
 }

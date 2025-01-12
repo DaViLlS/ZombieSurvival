@@ -47,7 +47,20 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
         private void OnAttackEnded()
         {
             _stateMachine.HandsController.Weapon.OnAttackEnded -= OnAttackEnded;
-            _stateMachine.ChangeStateByType(HandsStateType.Idle);
+
+            if (_stateMachine.InputHandler.IsShiftPerformed)
+            {
+                _stateMachine.ChangeStateByType(HandsStateType.Run);
+            }
+            else if (_stateMachine.InputHandler.IsMovementPerformed)
+            {
+                _stateMachine.ChangeStateByType(HandsStateType.Walk);
+            }
+            else
+            {
+                _stateMachine.ChangeStateByType(HandsStateType.Idle);
+            }
+            
         }
 
         private IEnumerator WaitAttackRoutine()

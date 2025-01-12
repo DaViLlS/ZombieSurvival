@@ -23,7 +23,9 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates
             _stateHandlers = new Dictionary<HandsStateType, IState>()
             {
                 { HandsStateType.Idle, new HandsIdleState(this) },
-                { HandsStateType.Attack, new HandsAttackState(this) }
+                { HandsStateType.Attack, new HandsAttackState(this) },
+                { HandsStateType.Walk, new HandsWalkState(this) },
+                { HandsStateType.Run, new HandsRunState(this) }
             };
 
             ChangeStateByType(HandsStateType.Idle);

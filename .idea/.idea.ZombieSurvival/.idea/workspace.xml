@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/FireAxe.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/FireAxe.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/PistolM1911.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/PistolM1911.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsRunState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsRunState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsWalkState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsWalkState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/source/axe.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/source/axe.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/source/Pistol.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/source/Pistol.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/PlayerInput/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PlayerInput/InputHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/HandsStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/HandsStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/HandsStateType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/HandsStateType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsAttackState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Playground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Playground.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
       <workItem from="1735818260246" duration="5088000" />
       <workItem from="1735911342943" duration="877000" />
       <workItem from="1736676381884" duration="8411000" />
-      <workItem from="1736688972967" duration="5135000" />
+      <workItem from="1736688972967" duration="8407000" />
     </task>
     <servers />
   </component>

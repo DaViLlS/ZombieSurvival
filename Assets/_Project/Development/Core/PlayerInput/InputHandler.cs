@@ -19,11 +19,13 @@ namespace _Project.Development.Core.PlayerInput
         private float _mouseXAxis;
         private float _mouseYAxis;
         private bool _isMovementPerformed;
+        private bool _isShiftPerformed;
 
         public float MouseXAxis => _mouseXAxis;
         public float MouseYAxis => _mouseYAxis;
         public Vector2 MovementVector => _inputActions.Player.Movement.ReadValue<Vector2>();
         public bool IsMovementPerformed => _isMovementPerformed;
+        public bool IsShiftPerformed => _isShiftPerformed;
 
         private void Start()
         {
@@ -64,11 +66,13 @@ namespace _Project.Development.Core.PlayerInput
 
         private void ShiftPerformed(InputAction.CallbackContext context)
         {
+            _isShiftPerformed = true;
             OnShiftPerformed?.Invoke();
         }
 
         private void ShiftCancelled(InputAction.CallbackContext context)
         {
+            _isShiftPerformed = false;
             OnShiftCancelled?.Invoke();
         }
 
