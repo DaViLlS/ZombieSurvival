@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapon/WeaponStates/States/WeaponIdleState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapon/WeaponStates/States/WeaponIdleState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapon/WeaponStates/WeaponStateType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapon/WeaponStates/WeaponStateType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsRunState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsRunState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsWalkState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsWalkState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterJumpState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterRunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterRunState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapon/WeaponStates/WeaponStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapon/WeaponStates/WeaponStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/PlayerInput/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PlayerInput/InputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/HandsStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/HandsStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/HandsStateType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/HandsStateType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsAttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Hands/HandsStates/States/HandsIdleState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +37,13 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "hands",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -97,6 +101,9 @@
       <updated>1735816172924</updated>
       <workItem from="1735816180825" duration="2005000" />
       <workItem from="1735818260246" duration="5088000" />
+      <workItem from="1735911342943" duration="877000" />
+      <workItem from="1736676381884" duration="8411000" />
+      <workItem from="1736688972967" duration="9056000" />
     </task>
     <servers />
   </component>

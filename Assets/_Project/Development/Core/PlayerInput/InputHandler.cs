@@ -12,16 +12,20 @@ namespace _Project.Development.Core.PlayerInput
         public event Action OnMovementCancelled;
         public event Action OnShiftPerformed;
         public event Action OnShiftCancelled;
+        public event Action OnAttackPerformed;
+        public event Action OnAttackCancelled;
 
         private PlayerInputActions _inputActions;
         private float _mouseXAxis;
         private float _mouseYAxis;
         private bool _isMovementPerformed;
+        private bool _isShiftPerformed;
 
         public float MouseXAxis => _mouseXAxis;
         public float MouseYAxis => _mouseYAxis;
         public Vector2 MovementVector => _inputActions.Player.Movement.ReadValue<Vector2>();
         public bool IsMovementPerformed => _isMovementPerformed;
+        public bool IsShiftPerformed => _isShiftPerformed;
 
         private void Start()
         {
@@ -33,6 +37,8 @@ namespace _Project.Development.Core.PlayerInput
             _inputActions.Player.Movement.canceled += MovementCancelled;
             _inputActions.Player.Shift.performed += ShiftPerformed;
             _inputActions.Player.Shift.canceled += ShiftCancelled;
+            _inputActions.Player.Attack.performed += AttackPerformed;
+            _inputActions.Player.Attack.canceled += AttackCancelled;
         }
 
         private void Update()
@@ -45,32 +51,39 @@ namespace _Project.Development.Core.PlayerInput
         {
             _isMovementPerformed = true;
             OnMovementPerformed?.Invoke();
-            Debug.Log("Movement performed");
         }
 
         private void MovementCancelled(InputAction.CallbackContext context)
         {
             _isMovementPerformed = false;
             OnMovementCancelled?.Invoke();
-            Debug.Log("Movement cancelled");
         }
 
-        public void JumpPerformed(InputAction.CallbackContext context)
+        private void JumpPerformed(InputAction.CallbackContext context)
         {
             OnJumpPerformed?.Invoke();
-            Debug.Log("Jump performed");
         }
 
-        public void ShiftPerformed(InputAction.CallbackContext context)
+        private void ShiftPerformed(InputAction.CallbackContext context)
         {
+            _isShiftPerformed = true;
             OnShiftPerformed?.Invoke();
-            Debug.Log("Shift performed");
         }
 
-        public void ShiftCancelled(InputAction.CallbackContext context)
+        private void ShiftCancelled(InputAction.CallbackContext context)
         {
+            _isShiftPerformed = false;
             OnShiftCancelled?.Invoke();
-            Debug.Log("Shift cancelled");
+        }
+
+        private void AttackPerformed(InputAction.CallbackContext context)
+        {
+            OnAttackPerformed?.Invoke();
+        }
+        
+        private void AttackCancelled(InputAction.CallbackContext context)
+        {
+            OnAttackCancelled?.Invoke();
         }
     }
 }
