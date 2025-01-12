@@ -1,4 +1,5 @@
 using _Project.Development.Core.StateMachine;
+using UnityEngine;
 
 namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
 {
@@ -13,6 +14,8 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
         
         public void OnEnterState()
         {
+            Debug.Log("Idle state entered");
+            
             _stateMachine.InputHandler.OnAttackPerformed += OnAttackPerformed;
         }
 

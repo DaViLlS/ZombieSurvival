@@ -49,44 +49,37 @@ namespace _Project.Development.Core.PlayerInput
         {
             _isMovementPerformed = true;
             OnMovementPerformed?.Invoke();
-            Debug.Log("Movement performed");
         }
 
         private void MovementCancelled(InputAction.CallbackContext context)
         {
             _isMovementPerformed = false;
             OnMovementCancelled?.Invoke();
-            Debug.Log("Movement cancelled");
         }
 
         private void JumpPerformed(InputAction.CallbackContext context)
         {
             OnJumpPerformed?.Invoke();
-            Debug.Log("Jump performed");
         }
 
         private void ShiftPerformed(InputAction.CallbackContext context)
         {
             OnShiftPerformed?.Invoke();
-            Debug.Log("Shift performed");
         }
 
         private void ShiftCancelled(InputAction.CallbackContext context)
         {
             OnShiftCancelled?.Invoke();
-            Debug.Log("Shift cancelled");
         }
 
         private void AttackPerformed(InputAction.CallbackContext context)
         {
             OnAttackPerformed?.Invoke();
-            Debug.Log("Attack performed");
         }
         
         private void AttackCancelled(InputAction.CallbackContext context)
         {
             OnAttackCancelled?.Invoke();
-            Debug.Log("Attack cancelled");
         }
     }
 }

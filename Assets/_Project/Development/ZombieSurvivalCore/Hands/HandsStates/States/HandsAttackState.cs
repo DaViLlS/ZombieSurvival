@@ -1,10 +1,18 @@
-using _Project.Development.Core.StateMachine;
+using System.Collections;
+using UnityEngine;
+using IState = _Project.Development.Core.StateMachine.IState;
 
 namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
 {
     public class HandsAttackState : IState
     {
-        private HandsStateMachine _stateMachine;
+        private const float FixedTime = 0.5f;
+        
+        private readonly HandsStateMachine _stateMachine;
+
+        private Coroutine _waitCoroutine;
+        private bool _isAttackCancelled;
+        private float _heavyAttackTime;
         
         public HandsAttackState(HandsStateMachine stateMachine)
         {
@@ -13,21 +21,47 @@ namespace _Project.Development.ZombieSurvivalCore.Hands.HandsStates.States
         
         public void OnEnterState()
         {
-            _stateMachine.InputHandler.OnAttackPerformed += OnAttackPerformed;
+            Debug.Log("Attack state entered");
+            
+            _stateMachine.InputHandler.OnAttackCancelled += OnAttackCancelled;
+            _heavyAttackTime = 0f;
+
+            _waitCoroutine = _stateMachine.StartCoroutine(WaitAttackRoutine());
         }
 
-        public void OnExitState()
+        public void OnExitState() { }
+        
+        private void OnAttackCancelled()
         {
-            _stateMachine.InputHandler.OnAttackPerformed -= OnAttackPerformed;
+            _stateMachine.InputHandler.OnAttackCancelled -= OnAttackCancelled;
+            
+            _stateMachine.StopCoroutine(_waitCoroutine);
+
+            Debug.Log(_heavyAttackTime >= FixedTime ? "Heavy attack" : "Simple attack");
+
+            _stateMachine.ChangeStateByType(HandsStateType.Idle);
+        }
+
+        private IEnumerator WaitAttackRoutine()
+        {
+            while(true)
+            {
+                yield return new WaitForEndOfFrame();
+
+                _heavyAttackTime += Time.deltaTime;
+            }
+        }
+
+        private IEnumerator AttackRoutine()
+        {
+            yield return new WaitForSeconds(1f);
+            
+            Debug.Log("Attacked");
+            _stateMachine.ChangeStateByType(HandsStateType.Idle);
         }
         
         public void Execute() { }
 
         public void FixedExecute() { }
-
-        private void OnAttackPerformed()
-        {
-            _stateMachine.ChangeStateByType(HandsStateType.Attack);
-        }
     }
 }
