@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates;
 using UnityEngine;
@@ -15,7 +16,9 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
         [SerializeField] private List<Transform> testingWaypoints;
         [SerializeField] private Transform target;
 
+        private Coroutine _coroutine;
         private int _currentPointIndex;
+        private bool _isAttacking;
 
         private void Awake()
         {
@@ -31,15 +34,56 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
             animator.SetBool("IsWalking", true);
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             Chase();
         }
 
         private void Chase()
         {
-            navMeshAgent.destination = target.position;
+            Debug.Log(Vector2.Distance(transform.position, navMeshAgent.destination));
+            
+            navMeshAgent.SetDestination(target.position);
+            
+            if (_isAttacking)
+                return;
+            
+            if (Vector2.Distance(transform.position, navMeshAgent.destination) <= 1.1f)
+            {
+                if (_coroutine != null)
+                    StopCoroutine(_coroutine);
+                
+                animator.SetBool("IsWalking", false);
+                navMeshAgent.isStopped = true;
+                _coroutine = StartCoroutine(Attacking());
+
+                return;
+            }
+            
+            if (_coroutine != null)
+                StopCoroutine(_coroutine);
+
+            _isAttacking = false;
+            animator.SetBool("IsAttacking", false);
+            animator.SetBool("IsWalking", true);
+            navMeshAgent.isStopped = false;
         }
+
+        private IEnumerator Attacking()
+        {
+            while (true)
+            {
+                _isAttacking = true;
+                animator.SetBool("IsAttacking", true);
+            
+                yield return new WaitForSeconds(0.8965517f);
+                
+                _isAttacking = false;
+                animator.SetBool("IsAttacking", false);
+                
+                yield return new WaitForSeconds(0.5f);
+            }
+        } 
 
         private void Walk()
         {
