@@ -15,6 +15,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
         
         [SerializeField] private List<Transform> testingWaypoints;
         [SerializeField] private Transform target;
+        [SerializeField] private float distanceToTarget;
 
         private Coroutine _coroutine;
         private int _currentPointIndex;
@@ -41,14 +42,12 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         private void Chase()
         {
-            Debug.Log(Vector2.Distance(transform.position, navMeshAgent.destination));
-            
-            navMeshAgent.SetDestination(target.position);
+            navMeshAgent.destination = target.position;
             
             if (_isAttacking)
                 return;
             
-            if (Vector2.Distance(transform.position, navMeshAgent.destination) <= 1.1f)
+            if (Vector3.Distance(transform.position, target.position) <= distanceToTarget)
             {
                 if (_coroutine != null)
                     StopCoroutine(_coroutine);
