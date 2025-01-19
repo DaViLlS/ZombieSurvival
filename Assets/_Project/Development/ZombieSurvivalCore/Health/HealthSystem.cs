@@ -15,6 +15,7 @@ namespace _Project.Development.ZombieSurvivalCore.Health
         public HealthSystem(float initialHealth)
         {
             _initialHealth = initialHealth;
+            _currentHealth = _initialHealth;
         }
 
         public void ReduceHealth(float health)

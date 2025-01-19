@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1184,8 +1184,9 @@ GameObject:
   m_Component:
   - component: {fileID: 979081215}
   - component: {fileID: 979081216}
+  - component: {fileID: 979081217}
   m_Layer: 0
-  m_Name: LeftLegCollider
+  m_Name: RightLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1229,6 +1230,19 @@ CapsuleCollider:
   m_Height: 0.82
   m_Direction: 1
   m_Center: {x: 0, y: -0.1, z: 0}
+--- !u!114 &979081217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979081214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af86e99cbb234bfca5bf09aebd696dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 2
 --- !u!1 &1213702495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,6 +2784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1872537046}
   - component: {fileID: 1872537047}
+  - component: {fileID: 1872537048}
   m_Layer: 0
   m_Name: LeftLegCollider
   m_TagString: Untagged
@@ -2815,6 +2830,19 @@ CapsuleCollider:
   m_Height: 0.82
   m_Direction: 1
   m_Center: {x: 0, y: -0.1, z: 0}
+--- !u!114 &1872537048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872537045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af86e99cbb234bfca5bf09aebd696dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 2
 --- !u!1 &1905754856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,6 +3786,16 @@ MonoBehaviour:
   navMeshAgent: {fileID: 919132147545459778}
   enemyStateMachine: {fileID: 919132147545459779}
   speed: 1
+  health: 100
+  limbs:
+  - {fileID: 6582942952372210407}
+  - {fileID: 7816043447464800575}
+  - {fileID: 8744475284082978658}
+  - {fileID: 5672612363915934507}
+  - {fileID: 1872537048}
+  - {fileID: 979081217}
+  chase: 0
+  walk: 0
   testingWaypoints:
   - {fileID: 705074331}
   - {fileID: 244862816}
@@ -3877,6 +3915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6582942952372210405}
   - component: {fileID: 6582942952372210406}
+  - component: {fileID: 6582942952372210407}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -4568,8 +4607,9 @@ GameObject:
   m_Component:
   - component: {fileID: 530377999702356229}
   - component: {fileID: 5672612363915934506}
+  - component: {fileID: 5672612363915934507}
   m_Layer: 0
-  m_Name: Elbow_R
+  m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4598,6 +4638,19 @@ CapsuleCollider:
   m_Height: 0.79
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5672612363915934507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672612363915934505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af86e99cbb234bfca5bf09aebd696dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 2
 --- !u!4 &6138825656583681549
 Transform:
   m_ObjectHideFlags: 0
@@ -4782,6 +4835,19 @@ CapsuleCollider:
   m_Height: 0.72
   m_Direction: 1
   m_Center: {x: 0.07, y: -0.22, z: -0.06}
+--- !u!114 &6582942952372210407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604479625829108648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af86e99cbb234bfca5bf09aebd696dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 5
 --- !u!1 &6598595495319998743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4968,6 +5034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5232673641409583423}
   - component: {fileID: 7816043447464800574}
+  - component: {fileID: 7816043447464800575}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -4998,6 +5065,19 @@ CapsuleCollider:
   m_Height: 0
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.03}
+--- !u!114 &7816043447464800575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7816043447464800573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af86e99cbb234bfca5bf09aebd696dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 10
 --- !u!1 &7924805238409471887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5167,8 +5247,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8670615566414062617}
   - component: {fileID: 8744475284082978657}
+  - component: {fileID: 8744475284082978658}
   m_Layer: 0
-  m_Name: Elbow_L
+  m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5197,6 +5278,19 @@ CapsuleCollider:
   m_Height: 0.79
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8744475284082978658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8744475284082978656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af86e99cbb234bfca5bf09aebd696dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 2
 --- !u!1 &8834413036466889563
 GameObject:
   m_ObjectHideFlags: 0

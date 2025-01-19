@@ -10,6 +10,7 @@ namespace _Project.Development.ZombieSurvivalCore.Weapons
         [SerializeField] private Transform bulletParent;
         [SerializeField] private Bullet bullet;
         [SerializeField] private GameObject bulletHole;
+        [SerializeField] private float damage;
         
         public override void SimpleAttack()
         {
@@ -26,8 +27,12 @@ namespace _Project.Development.ZombieSurvivalCore.Weapons
             if (Physics.Raycast(UnityEngine.Camera.main.transform.position,
                     UnityEngine.Camera.main.transform.forward, out var hitInfo, 100, layerMaskWithoutPlayer))
             {
-                Debug.Log(hitInfo.collider.gameObject.name);
-                Instantiate(bulletHole, hitInfo.point, Quaternion.identity);
+                if (hitInfo.collider.gameObject.TryGetComponent<Limb>(out var limb))
+                {
+                    Debug.Log(hitInfo.collider.gameObject.name);
+                    Instantiate(bulletHole, hitInfo.point, Quaternion.identity);
+                    limb.Damage(damage);
+                }
             }
             
             StartCoroutine(AttackEndRoutine());

@@ -58,6 +58,7 @@ MonoBehaviour:
   bulletParent: {fileID: 6147633196423961472}
   bullet: {fileID: 7905487878813806266, guid: bf556a236004a2f45b4296a4f38484c7, type: 3}
   bulletHole: {fileID: 79703934781347868, guid: f0d8ef41760a30648ba5c914fc27beb0, type: 3}
+  damage: 5
 --- !u!95 &1729428024222110104
 Animator:
   serializedVersion: 5
