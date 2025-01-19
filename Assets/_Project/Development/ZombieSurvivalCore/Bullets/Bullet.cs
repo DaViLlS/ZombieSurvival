@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace _Project.Development.ZombieSurvivalCore.Bullets
@@ -6,20 +7,23 @@ namespace _Project.Development.ZombieSurvivalCore.Bullets
     {
         [SerializeField] private float speed;
         [SerializeField] private float distance;
+        [SerializeField] private float destroyTime;
+
+        private void Start()
+        {
+            StartCoroutine(Destroy());
+        }
 
         private void FixedUpdate()
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        }
 
-            var ray = new Ray(transform.position, transform.forward);
+        private IEnumerator Destroy()
+        {
+            yield return new WaitForSeconds(destroyTime);
             
-            if (Physics.Raycast(ray, out var hit, distance))
-            {
-                Transform objectHit = hit.transform;
-                Debug.Log("Попал в объект: " + objectHit.name);
-                
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 }

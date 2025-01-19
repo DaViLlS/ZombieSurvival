@@ -64,6 +64,15 @@ namespace InputActions
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""91f727b6-f692-457c-9135-00451def1f0d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -154,6 +163,17 @@ namespace InputActions
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39d2c0db-4b44-4bbc-a75c-50501ade4d73"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -166,6 +186,7 @@ namespace InputActions
             m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
             m_Player_Shift = m_Player.FindAction("Shift", throwIfNotFound: true);
             m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+            m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -231,6 +252,7 @@ namespace InputActions
         private readonly InputAction m_Player_Movement;
         private readonly InputAction m_Player_Shift;
         private readonly InputAction m_Player_Attack;
+        private readonly InputAction m_Player_Reload;
         public struct PlayerActions
         {
             private @PlayerInputActions m_Wrapper;
@@ -239,6 +261,7 @@ namespace InputActions
             public InputAction @Movement => m_Wrapper.m_Player_Movement;
             public InputAction @Shift => m_Wrapper.m_Player_Shift;
             public InputAction @Attack => m_Wrapper.m_Player_Attack;
+            public InputAction @Reload => m_Wrapper.m_Player_Reload;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -260,6 +283,9 @@ namespace InputActions
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
             }
 
             private void UnregisterCallbacks(IPlayerActions instance)
@@ -276,6 +302,9 @@ namespace InputActions
                 @Attack.started -= instance.OnAttack;
                 @Attack.performed -= instance.OnAttack;
                 @Attack.canceled -= instance.OnAttack;
+                @Reload.started -= instance.OnReload;
+                @Reload.performed -= instance.OnReload;
+                @Reload.canceled -= instance.OnReload;
             }
 
             public void RemoveCallbacks(IPlayerActions instance)
@@ -299,6 +328,7 @@ namespace InputActions
             void OnMovement(InputAction.CallbackContext context);
             void OnShift(InputAction.CallbackContext context);
             void OnAttack(InputAction.CallbackContext context);
+            void OnReload(InputAction.CallbackContext context);
         }
     }
 }

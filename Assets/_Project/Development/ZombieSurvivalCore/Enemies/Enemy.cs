@@ -32,12 +32,12 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
             
             navMeshAgent.speed = speed;
             
-            animator.SetBool("IsWalking", true);
+            //animator.SetBool("IsWalking", true);
         }
 
         private void FixedUpdate()
         {
-            Chase();
+            //Chase();
         }
 
         private void Chase()

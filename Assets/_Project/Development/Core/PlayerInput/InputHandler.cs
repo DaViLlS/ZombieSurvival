@@ -14,6 +14,7 @@ namespace _Project.Development.Core.PlayerInput
         public event Action OnShiftCancelled;
         public event Action OnAttackPerformed;
         public event Action OnAttackCancelled;
+        public event Action OnReloadPerformed;
 
         private PlayerInputActions _inputActions;
         private float _mouseXAxis;
@@ -39,6 +40,7 @@ namespace _Project.Development.Core.PlayerInput
             _inputActions.Player.Shift.canceled += ShiftCancelled;
             _inputActions.Player.Attack.performed += AttackPerformed;
             _inputActions.Player.Attack.canceled += AttackCancelled;
+            _inputActions.Player.Reload.performed += ReloadPerformed;
         }
 
         private void Update()
@@ -84,6 +86,11 @@ namespace _Project.Development.Core.PlayerInput
         private void AttackCancelled(InputAction.CallbackContext context)
         {
             OnAttackCancelled?.Invoke();
+        }
+
+        private void ReloadPerformed(InputAction.CallbackContext context)
+        {
+            OnReloadPerformed?.Invoke();
         }
     }
 }
