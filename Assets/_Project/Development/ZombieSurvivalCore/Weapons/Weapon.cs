@@ -8,6 +8,7 @@ namespace _Project.Development.ZombieSurvivalCore.Weapons
         private const string WalkAnimationTitle = "IsWalking";
         private const string RunAnimationTitle = "IsRunning";
         public event Action OnAttackEnded;
+        public event Action OnReloadEnded;
         
         [SerializeField] protected Animator animator;
 
@@ -29,6 +30,11 @@ namespace _Project.Development.ZombieSurvivalCore.Weapons
         protected void EndAttack()
         {
             OnAttackEnded?.Invoke();
+        }
+
+        protected void EndReload()
+        {
+            OnReloadEnded?.Invoke();
         }
     }
 }

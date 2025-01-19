@@ -5,39 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Health/Limb.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Health/Limb.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Weapons/PistolM1911.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Weapons/PistolM1911.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/source/axe.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/source/axe.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/source/axe.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/source/axe.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/textures/Arms_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/textures/Arms_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/textures/Fire_Axe_Albedo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-axe/textures/Fire_Axe_Albedo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/source/Pistol.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/source/Pistol.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/source/Pistol.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/source/Pistol.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/textures/Arms_Diffuse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/textures/Arms_Diffuse.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/textures/pistolLOWcolor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-pistol/textures/pistolLOWcolor.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie/source/zombie.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie/source/zombie.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie/textures/zombie_albedo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie/textures/zombie_albedo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie/textures/zombie_cloth_albedo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/animated-fps-zombie/textures/zombie_cloth_albedo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Health/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Health/HealthSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/PistolM1911.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/PistolM1911.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Playground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Playground.unity" afterDir="false" />
     </list>
@@ -46,10 +19,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df89dc78bd2a42f18d0568aae77e6b85d400/41/fbc164f3/NavMeshAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Bullets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -60,20 +37,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "shooting",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;enemy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
@@ -132,6 +110,9 @@
       <workItem from="1736676381884" duration="8411000" />
       <workItem from="1736688972967" duration="9056000" />
       <workItem from="1736954312575" duration="5164000" />
+      <workItem from="1737035212380" duration="7395000" />
+      <workItem from="1737227368956" duration="5173000" />
+      <workItem from="1737280702602" duration="5675000" />
     </task>
     <servers />
   </component>

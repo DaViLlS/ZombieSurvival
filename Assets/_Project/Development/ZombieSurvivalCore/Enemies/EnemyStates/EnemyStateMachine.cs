@@ -1,0 +1,29 @@
+using System.Collections.Generic;
+using _Project.Development.Core.StateMachine;
+using _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States;
+using UnityEngine;
+
+namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates
+{
+    public class EnemyStateMachine : StateMachine
+    {
+        [SerializeField] private Enemy enemy;
+        
+        private Dictionary<EnemyStateType, IState> _stateHandlers;
+        
+        public override void Initialize()
+        {
+            _stateHandlers = new Dictionary<EnemyStateType, IState>()
+            {
+                { EnemyStateType.Idle, new EnemyIdleState(this) },
+            };
+
+            ChangeStateByType(EnemyStateType.Idle);
+        }
+        
+        public void ChangeStateByType(EnemyStateType enemyStateType)
+        {
+            ChangeState(_stateHandlers[enemyStateType]);
+        }
+    }
+}
