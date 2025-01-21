@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Conifer Tall_BillboardMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 9687c08fa2bba864ba8950c7a039274c,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9687c08fa2bba864ba8950c7a039274c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -71,8 +70,8 @@ Material:
     - _QueueOffset: 0
     - _Smoothness: 1
     - _ThicknessRemap: 1
-    - _WindPower: 1.5
-    - _WindStrength: 0.76
+    - _WindPower: 0
+    - _WindStrength: 0
     m_Colors:
     - _HueVariation: {r: 0, g: 0.9, b: 0.8255172, a: 0.1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
