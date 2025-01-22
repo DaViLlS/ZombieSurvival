@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="" />
+    <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyAttackState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyAttackState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyChaseState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyChaseState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyWanderState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyWanderState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +46,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "village-location",
+    "git-widget-placeholder": "Zombie-features",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,6 +118,7 @@
       <workItem from="1737227368956" duration="5173000" />
       <workItem from="1737280702602" duration="5675000" />
       <workItem from="1737468470659" duration="1335000" />
+      <workItem from="1737556973562" duration="1085000" />
     </task>
     <servers />
   </component>

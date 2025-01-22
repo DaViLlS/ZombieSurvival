@@ -8,6 +8,8 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates
     public class EnemyStateMachine : StateMachine
     {
         [SerializeField] private Enemy enemy;
+
+        public Enemy Enemy => enemy;
         
         private Dictionary<EnemyStateType, IState> _stateHandlers;
         

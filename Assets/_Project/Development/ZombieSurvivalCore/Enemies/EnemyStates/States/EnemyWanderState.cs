@@ -2,20 +2,20 @@ using _Project.Development.Core.StateMachine;
 
 namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
 {
-    public class EnemyIdleState : IState
+    public class EnemyWanderState : IState
     {
         private EnemyStateMachine _enemyStateMachine;
         
         private Enemy Enemy => _enemyStateMachine.Enemy;
 
-        public EnemyIdleState(EnemyStateMachine enemyStateMachine)
+        public EnemyWanderState(EnemyStateMachine enemyStateMachine)
         {
             _enemyStateMachine = enemyStateMachine;
         }
         
         public void OnEnterState()
         {
-            _enemyStateMachine.Enemy.Animator.SetBool("IsWalking", false);
+            Enemy.Animator.SetBool("IsWalking", true);
         }
 
         public void OnExitState()
