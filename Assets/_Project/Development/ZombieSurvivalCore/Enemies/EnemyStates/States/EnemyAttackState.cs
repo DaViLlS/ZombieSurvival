@@ -19,12 +19,17 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
         
         public void OnEnterState()
         {
-            Enemy.Animator.SetBool("IsWalking", true);
+            Enemy.Animator.SetBool("IsWalking", false);
+            Enemy.NavMeshAgent.isStopped = true;
+            _coroutine = _enemyStateMachine.StartCoroutine(Attacking());
         }
 
         public void OnExitState()
         {
+            if (_coroutine != null)
+                _enemyStateMachine.StopCoroutine(_coroutine);
             
+            Enemy.Animator.SetBool("IsAttacking", false);
         }
         
         public void Execute()
@@ -39,8 +44,6 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
                 if (_coroutine != null)
                     _enemyStateMachine.StopCoroutine(_coroutine);
                 
-                Enemy.Animator.SetBool("IsWalking", false);
-                Enemy.NavMeshAgent.isStopped = true;
                 _coroutine = _enemyStateMachine.StartCoroutine(Attacking());
 
                 return;
@@ -49,10 +52,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
             if (_coroutine != null)
                 _enemyStateMachine.StopCoroutine(_coroutine);
 
-            _isAttacking = false;
-            Enemy.Animator.SetBool("IsAttacking", false);
-            Enemy.Animator.SetBool("IsWalking", true);
-            Enemy.NavMeshAgent.isStopped = false;
+            _enemyStateMachine.ChangeStateByType(EnemyStateType.Chase);
         }
         
         private IEnumerator Attacking()

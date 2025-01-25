@@ -14,9 +14,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
         [SerializeField] private float speed;
         [SerializeField] private float health;
         [SerializeField] private List<Limb> limbs;
-
-        [SerializeField] private bool chase;
-        [SerializeField] private bool walk;
+        
         [SerializeField] private List<Transform> testingWaypoints;
         [SerializeField] private Transform target;
         [SerializeField] private float distanceToTarget;
@@ -25,7 +23,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
         private int _currentPointIndex;
         private Transform _target;
 
-        public Transform Target => _target;
+        public Transform Target => target;
         public Animator Animator => animator;
         public NavMeshAgent NavMeshAgent => navMeshAgent;
         public float DistanceToTarget => distanceToTarget;
@@ -65,7 +63,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         private void FixedUpdate()
         {
-            if (chase)
+            /*if (chase)
             {
                 animator.SetBool("IsWalking", true);
                 Chase();
@@ -79,7 +77,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
                 return;
             }
             
-            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsWalking", false);*/
         }
         
         private void Walk()
