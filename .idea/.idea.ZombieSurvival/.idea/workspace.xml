@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/ShootEffect.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/ShootEffect/ShootEffectController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/ShootEffect/ShootEffectController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dnk_Dev/RockPack.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dnk_Dev/RockPack.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dnk_Dev/RockPack/Models.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dnk_Dev/RockPack/Models.meta" afterDir="false" />
@@ -80,6 +77,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/85/91c65ed0/SetupCoroutine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/df89dc78bd2a42f18d0568aae77e6b85d400/41/fbc164f3/NavMeshAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Bullets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Terrain/TerrainLit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -170,7 +168,7 @@
       <workItem from="1737468470659" duration="1335000" />
       <workItem from="1737556973562" duration="1085000" />
       <workItem from="1737790415933" duration="3666000" />
-      <workItem from="1737795568530" duration="23436000" />
+      <workItem from="1737795568530" duration="24841000" />
     </task>
     <servers />
   </component>
