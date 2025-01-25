@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _Project.Development.Core.Pause;
 using _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates;
 using _Project.Development.ZombieSurvivalCore.Health;
 using _Project.Development.ZombieSurvivalCore.MainCharacter;
@@ -8,7 +9,7 @@ using Zenject;
 
 namespace _Project.Development.ZombieSurvivalCore.Enemies
 {
-    public class Enemy : MonoBehaviour
+    public class Enemy : MonoBehaviour, IPauseable
     {
         [Inject] private Character _character;
         
@@ -67,17 +68,22 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
                 Destroy(gameObject);
             }
         }
+        
+        public void Resume()
+        {
+            enemyStateMachine.Resume();
+            navMeshAgent.isStopped = false;
+        }
+
+        public void Pause()
+        {
+            enemyStateMachine.Pause();
+            navMeshAgent.isStopped = true;
+        }
 
         private void FixedUpdate()
         {
-            /*if (chase)
-            {
-                animator.SetBool("IsWalking", true);
-                Chase();
-                return;
-            }
-
-            if (walk)
+            /*if (walk)
             {
                 animator.SetBool("IsWalking", true);
                 Walk();
@@ -98,10 +104,6 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
             {
                 _currentPointIndex++;
             }
-        }
-
-        private void Chase()
-        {
         }
     }
 }

@@ -10,6 +10,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
         private EnemyStateMachine _enemyStateMachine;
         private Coroutine _coroutine;
         private bool _isAttacking;
+        private bool _isPaused;
 
         private Enemy Enemy => _enemyStateMachine.Enemy;
 
@@ -23,6 +24,30 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
             Enemy.Animator.SetBool("IsWalking", false);
             Enemy.NavMeshAgent.isStopped = true;
             _coroutine = _enemyStateMachine.StartCoroutine(Attacking());
+            _enemyStateMachine.OnPaused += OnPaused;
+            _enemyStateMachine.OnResumed += OnResumed;
+        }
+
+        private void OnPaused()
+        {
+            Enemy.Animator.SetBool("IsAttacking", false);
+            _isPaused = true;
+            
+            if (_coroutine != null)
+                _enemyStateMachine.StopCoroutine(_coroutine);
+        }
+
+        private void OnResumed()
+        {
+            _isPaused = false;
+
+            if (!_isAttacking)
+                return;
+            
+            if (_coroutine != null)
+                _enemyStateMachine.StopCoroutine(_coroutine);
+            
+            _coroutine = _enemyStateMachine.StartCoroutine(Attacking());
         }
 
         public void OnExitState()
@@ -31,13 +56,16 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
                 _enemyStateMachine.StopCoroutine(_coroutine);
             
             Enemy.Animator.SetBool("IsAttacking", false);
+            
+            _enemyStateMachine.OnPaused -= OnPaused;
+            _enemyStateMachine.OnResumed -= OnResumed;
         }
         
         public void Execute()
         {
             Enemy.NavMeshAgent.destination = Enemy.Target.transform.position;
             
-            if (_isAttacking)
+            if (_isAttacking || _isPaused)
                 return;
             
             if (Vector3.Distance(Enemy.transform.position, Enemy.Target.transform.position) <= Enemy.DistanceToTarget)
@@ -63,9 +91,9 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
                 _isAttacking = true;
                 Enemy.Animator.SetBool("IsAttacking", true);
             
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.8965517f);
 
-                if (Vector3.Distance(Enemy.Target.position, Enemy.Target.position) <= Enemy.DistanceToTarget)
+                if (Vector3.Distance(Enemy.transform.position, Enemy.Target.position) <= Enemy.DistanceToTarget)
                 {
                     if (Enemy.Target.TryGetComponent<IDamageable>(out var damageable))
                     {

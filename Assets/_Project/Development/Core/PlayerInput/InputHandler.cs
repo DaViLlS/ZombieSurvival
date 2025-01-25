@@ -28,6 +28,16 @@ namespace _Project.Development.Core.PlayerInput
         public bool IsMovementPerformed => _isMovementPerformed;
         public bool IsShiftPerformed => _isShiftPerformed;
 
+        public void Pause()
+        {
+            _inputActions.Disable();
+        }
+
+        public void Resume()
+        {
+            _inputActions.Enable();
+        }
+
         private void Start()
         {
             _inputActions = new PlayerInputActions();

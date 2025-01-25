@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using _Project.Development.Core.Pause;
 using _Project.Development.ZombieSurvivalCore.MainCharacter;
 using UnityEngine;
 using Zenject;
 
 namespace _Project.Development.ZombieSurvivalCore.Enemies
 {
-    public class EnemiesManager : MonoBehaviour
+    public class EnemiesManager : MonoBehaviour, IPauseable
     {
         [Inject] private IInstantiator _instantiator;
         [Inject] private Character _character;
@@ -17,6 +18,8 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         private List<Transform> _freePoints;
         private List<Transform> _orderedPoints;
+        
+        private List<Enemy> _enemies;
 
         private void Awake()
         {
@@ -25,6 +28,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         public void Initialize()
         {
+            _enemies = new List<Enemy>(startEnemiesCount);
             _orderedPoints = new List<Transform>(startEnemiesCount);
             _freePoints = new List<Transform>(enemySpawnPoints.Count);
             
@@ -49,8 +53,25 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         private void SpawnEnemy(Transform point)
         {
-            var enemy = _instantiator.InstantiatePrefab(enemyPrefab, point);
+            var enemy = _instantiator.InstantiatePrefabForComponent<Enemy>(enemyPrefab, point);
             enemy.transform.SetParent(enemiesContainer);
+            _enemies.Add(enemy);
+        }
+
+        public void Resume()
+        {
+            foreach (var enemy in _enemies)
+            {
+                enemy.Resume();
+            }
+        }
+
+        public void Pause()
+        {
+            foreach (var enemy in _enemies)
+            {
+                enemy.Pause();
+            }
         }
     }
 }

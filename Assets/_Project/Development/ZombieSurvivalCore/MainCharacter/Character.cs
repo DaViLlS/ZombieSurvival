@@ -1,13 +1,17 @@
 using System;
+using _Project.Development.Core.Pause;
+using _Project.Development.Core.PlayerInput;
 using _Project.Development.Core.StateMachine;
 using _Project.Development.ZombieSurvivalCore.Hands;
 using _Project.Development.ZombieSurvivalCore.Health;
 using UnityEngine;
+using Zenject;
 
 namespace _Project.Development.ZombieSurvivalCore.MainCharacter
 {
-    public class Character : MonoBehaviour, IDamageable
+    public class Character : MonoBehaviour, IDamageable, IPauseable
     {
+        [Inject] private InputHandler _inputHandler;
         public event Action OnCharacterGrounded;
 
         [SerializeField] private Rigidbody rb;
@@ -56,6 +60,18 @@ namespace _Project.Development.ZombieSurvivalCore.MainCharacter
         {
             if (collision.gameObject.CompareTag("Ground"))
                 OnCharacterGrounded?.Invoke();
+        }
+
+        public void Resume()
+        {
+            _inputHandler.Resume();
+            stateMachine.Resume();
+        }
+
+        public void Pause()
+        {
+            _inputHandler.Pause();
+            stateMachine.Pause();
         }
     }
 }
