@@ -17,6 +17,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
         [SerializeField] private EnemyStateMachine enemyStateMachine;
         [SerializeField] private float speed;
         [SerializeField] private float health;
+        [SerializeField] private float damage;
         [SerializeField] private List<Limb> limbs;
         
         [SerializeField] private List<Transform> testingWaypoints;
@@ -30,6 +31,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
         public Animator Animator => animator;
         public NavMeshAgent NavMeshAgent => navMeshAgent;
         public float DistanceToTarget => distanceToTarget;
+        public float Damage => damage;
 
         private void Awake()
         {

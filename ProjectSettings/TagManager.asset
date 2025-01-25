@@ -6,11 +6,12 @@ TagManager:
   tags:
   - ship
   - asteroid
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - PostProcessing

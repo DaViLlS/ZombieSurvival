@@ -1,5 +1,6 @@
 using System.Collections;
 using _Project.Development.Core.StateMachine;
+using _Project.Development.ZombieSurvivalCore.Health;
 using UnityEngine;
 
 namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
@@ -34,12 +35,12 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
         
         public void Execute()
         {
-            Enemy.NavMeshAgent.destination = Enemy.Target.position;
+            Enemy.NavMeshAgent.destination = Enemy.Target.transform.position;
             
             if (_isAttacking)
                 return;
             
-            if (Vector3.Distance(Enemy.transform.position, Enemy.Target.position) <= Enemy.DistanceToTarget)
+            if (Vector3.Distance(Enemy.transform.position, Enemy.Target.transform.position) <= Enemy.DistanceToTarget)
             {
                 if (_coroutine != null)
                     _enemyStateMachine.StopCoroutine(_coroutine);
@@ -62,7 +63,15 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
                 _isAttacking = true;
                 Enemy.Animator.SetBool("IsAttacking", true);
             
-                yield return new WaitForSeconds(0.8965517f);
+                yield return new WaitForSeconds(0.4f);
+
+                if (Vector3.Distance(Enemy.Target.position, Enemy.Target.position) <= Enemy.DistanceToTarget)
+                {
+                    if (Enemy.Target.TryGetComponent<IDamageable>(out var damageable))
+                    {
+                        damageable.ApplyDamage(Enemy.Damage);
+                    }
+                }
                 
                 _isAttacking = false;
                 Enemy.Animator.SetBool("IsAttacking", false);

@@ -18,7 +18,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
         public void OnEnterState()
         {
             Enemy.Animator.SetBool("IsWalking", true);
-            Enemy.NavMeshAgent.destination = Enemy.Target.position;
+            Enemy.NavMeshAgent.destination = Enemy.Target.transform.position;
             Enemy.NavMeshAgent.isStopped = false;
         }
 
@@ -30,9 +30,9 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
         
         public void Execute()
         {
-            Enemy.NavMeshAgent.destination = Enemy.Target.position;
+            Enemy.NavMeshAgent.destination = Enemy.Target.transform.position;
             
-            if (Vector3.Distance(Enemy.transform.position, Enemy.Target.position) <= Enemy.DistanceToTarget)
+            if (Vector3.Distance(Enemy.transform.position, Enemy.Target.transform.position) <= Enemy.DistanceToTarget)
             {
                 _enemyStateMachine.ChangeStateByType(EnemyStateType.Attack);
             }

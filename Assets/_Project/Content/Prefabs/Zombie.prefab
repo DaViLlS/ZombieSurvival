@@ -1917,6 +1917,7 @@ MonoBehaviour:
   enemyStateMachine: {fileID: 3467037883136139845}
   speed: 1
   health: 100
+  damage: 20
   limbs:
   - {fileID: 3681832543867538474}
   - {fileID: 9188370379674467234}
