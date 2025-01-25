@@ -2,6 +2,8 @@ using System;
 using _Project.Development.Core.Pause;
 using _Project.Development.Core.PlayerInput;
 using _Project.Development.Core.StateMachine;
+using _Project.Development.Core.UIBase;
+using _Project.Development.ZombieSurvivalCore.Camera;
 using _Project.Development.ZombieSurvivalCore.Hands;
 using _Project.Development.ZombieSurvivalCore.Health;
 using UnityEngine;
@@ -12,12 +14,15 @@ namespace _Project.Development.ZombieSurvivalCore.MainCharacter
     public class Character : MonoBehaviour, IDamageable, IPauseable
     {
         [Inject] private InputHandler _inputHandler;
+        [Inject] private UISystem _uiSystem;
+        
         public event Action OnCharacterGrounded;
 
         [SerializeField] private Rigidbody rb;
         [SerializeField] private StateMachine stateMachine;
         [SerializeField] private CharacterMovementSettings characterMovementSettings;
         [SerializeField] private HandsController handsController;
+        [SerializeField] private FirstPersonCamera firstPersonCamera;
         [SerializeField] private float health;
         
         private HealthSystem _healthSystem;
@@ -52,7 +57,8 @@ namespace _Project.Development.ZombieSurvivalCore.MainCharacter
 
             if (_healthSystem.CurrentHealth <= 0)
             {
-                Debug.Log("Ты умер");
+                GamePause.Instance.PauseGame();
+                _uiSystem.ShowWindow("Death");
             }
         }
 
@@ -64,12 +70,14 @@ namespace _Project.Development.ZombieSurvivalCore.MainCharacter
 
         public void Resume()
         {
+            firstPersonCamera.Resume();
             _inputHandler.Resume();
             stateMachine.Resume();
         }
 
         public void Pause()
         {
+            firstPersonCamera.Pause();
             _inputHandler.Pause();
             stateMachine.Pause();
         }

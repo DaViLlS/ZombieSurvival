@@ -29,5 +29,17 @@ namespace _Project.Development.ZombieSurvivalCore.Camera
             _rotationY += _inputHandler.MouseXAxis;
             character.transform.localRotation = Quaternion.Euler(0f, _rotationY, 0f);
         }
+
+        public void Pause()
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        public void Resume()
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }

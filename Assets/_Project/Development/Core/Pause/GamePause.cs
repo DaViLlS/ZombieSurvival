@@ -15,8 +15,11 @@ namespace _Project.Development.Core.Pause
         private List<IPauseable> _pauseObjects;
         private bool _isPaused;
 
+        public static GamePause Instance;
+
         private void Awake()
         {
+            Instance = this;
             _pauseObjects = new List<IPauseable>();
         }
 

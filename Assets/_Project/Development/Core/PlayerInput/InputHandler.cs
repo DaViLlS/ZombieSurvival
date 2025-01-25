@@ -21,6 +21,7 @@ namespace _Project.Development.Core.PlayerInput
         private float _mouseYAxis;
         private bool _isMovementPerformed;
         private bool _isShiftPerformed;
+        private bool _isPaused;
 
         public float MouseXAxis => _mouseXAxis;
         public float MouseYAxis => _mouseYAxis;
@@ -31,15 +32,18 @@ namespace _Project.Development.Core.PlayerInput
         public void Pause()
         {
             _inputActions.Disable();
+            _isPaused = true;
         }
 
         public void Resume()
         {
             _inputActions.Enable();
+            _isPaused = false;
         }
 
         private void Start()
         {
+            Cursor.visible = false;
             _inputActions = new PlayerInputActions();
             _inputActions.Enable();
 
@@ -55,6 +59,9 @@ namespace _Project.Development.Core.PlayerInput
 
         private void Update()
         {
+            if (_isPaused)
+                return;
+            
             _mouseXAxis = Input.GetAxis("Mouse X");
             _mouseYAxis = Input.GetAxis("Mouse Y");
         }

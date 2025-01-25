@@ -91,7 +91,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
                 _isAttacking = true;
                 Enemy.Animator.SetBool("IsAttacking", true);
             
-                yield return new WaitForSeconds(0.8965517f);
+                yield return new WaitForSeconds(0.5f);
 
                 if (Vector3.Distance(Enemy.transform.position, Enemy.Target.position) <= Enemy.DistanceToTarget)
                 {

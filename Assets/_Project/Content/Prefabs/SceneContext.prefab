@@ -92,5 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a29481f4d3843ecb89d36cd5ba0cf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 2246397130987450397, guid: c6f664a66260c924cb3e44064c39f7be, type: 3}
+  characterPrefab: {fileID: 2246397130987450397, guid: c6f664a66260c924cb3e44064c39f7be, type: 3}
   playerSpawnPoint: {fileID: 0}
+  enemiesManager: {fileID: 0}
+  uiSystem: {fileID: 0}
