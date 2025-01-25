@@ -1,6 +1,7 @@
 using System.Collections;
 using _Project.Development.ZombieSurvivalCore.Bullets;
 using _Project.Development.ZombieSurvivalCore.Health;
+using _Project.Development.ZombieSurvivalCore.Weapons.ShootEffect;
 using UnityEngine;
 
 namespace _Project.Development.ZombieSurvivalCore.Weapons
@@ -10,6 +11,7 @@ namespace _Project.Development.ZombieSurvivalCore.Weapons
         [SerializeField] private Transform bulletParent;
         [SerializeField] private Bullet bullet;
         [SerializeField] private float damage;
+        [SerializeField] private ShootEffectController shootEffect;
         
         public override void SimpleAttack()
         {
@@ -33,13 +35,22 @@ namespace _Project.Development.ZombieSurvivalCore.Weapons
                 }
             }
             
+            shootEffect.Play();
+            
             StartCoroutine(AttackEndRoutine());
+            StartCoroutine(ShootEffectRoutine());
         }
 
         public override void Reload()
         {
             animator.SetBool("IsReloading", true);
             StartCoroutine(ReloadingEndRoutine());
+        }
+
+        private IEnumerator ShootEffectRoutine()
+        {
+            yield return new WaitForSeconds(0.1f);
+            shootEffect.Stop();
         }
         
         private IEnumerator  AttackEndRoutine()
