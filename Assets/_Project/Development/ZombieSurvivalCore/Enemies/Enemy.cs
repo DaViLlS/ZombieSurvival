@@ -1,31 +1,35 @@
-using System.Collections;
 using System.Collections.Generic;
 using _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates;
 using _Project.Development.ZombieSurvivalCore.Health;
+using _Project.Development.ZombieSurvivalCore.MainCharacter;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 
 namespace _Project.Development.ZombieSurvivalCore.Enemies
 {
     public class Enemy : MonoBehaviour
     {
+        [Inject] private Character _character;
+        
         [SerializeField] private Animator animator;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private EnemyStateMachine enemyStateMachine;
         [SerializeField] private float speed;
         [SerializeField] private float health;
         [SerializeField] private List<Limb> limbs;
-
-        [SerializeField] private bool chase;
-        [SerializeField] private bool walk;
+        
         [SerializeField] private List<Transform> testingWaypoints;
-        [SerializeField] private Transform target;
         [SerializeField] private float distanceToTarget;
 
         private HealthSystem _healthSystem;
-        private Coroutine _coroutine;
         private int _currentPointIndex;
-        private bool _isAttacking;
+        private Transform _target;
+
+        public Transform Target => _target;
+        public Animator Animator => animator;
+        public NavMeshAgent NavMeshAgent => navMeshAgent;
+        public float DistanceToTarget => distanceToTarget;
 
         private void Awake()
         {
@@ -34,6 +38,8 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         public void Initialize()
         {
+            _target = _character.transform;
+            
             enemyStateMachine.Initialize();
             navMeshAgent.speed = speed;
             _healthSystem = new HealthSystem(health);
@@ -62,7 +68,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         private void FixedUpdate()
         {
-            if (chase)
+            /*if (chase)
             {
                 animator.SetBool("IsWalking", true);
                 Chase();
@@ -76,7 +82,7 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
                 return;
             }
             
-            animator.SetBool("IsWalking", false);
+            animator.SetBool("IsWalking", false);*/
         }
         
         private void Walk()
@@ -94,46 +100,6 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         private void Chase()
         {
-            navMeshAgent.destination = target.position;
-            
-            if (_isAttacking)
-                return;
-            
-            if (Vector3.Distance(transform.position, target.position) <= distanceToTarget)
-            {
-                if (_coroutine != null)
-                    StopCoroutine(_coroutine);
-                
-                animator.SetBool("IsWalking", false);
-                navMeshAgent.isStopped = true;
-                _coroutine = StartCoroutine(Attacking());
-
-                return;
-            }
-            
-            if (_coroutine != null)
-                StopCoroutine(_coroutine);
-
-            _isAttacking = false;
-            animator.SetBool("IsAttacking", false);
-            animator.SetBool("IsWalking", true);
-            navMeshAgent.isStopped = false;
-        }
-
-        private IEnumerator Attacking()
-        {
-            while (true)
-            {
-                _isAttacking = true;
-                animator.SetBool("IsAttacking", true);
-            
-                yield return new WaitForSeconds(0.8965517f);
-                
-                _isAttacking = false;
-                animator.SetBool("IsAttacking", false);
-                
-                yield return new WaitForSeconds(0.5f);
-            }
         }
     }
 }

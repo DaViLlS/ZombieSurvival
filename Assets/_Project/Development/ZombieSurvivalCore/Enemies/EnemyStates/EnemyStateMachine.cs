@@ -8,6 +8,8 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates
     public class EnemyStateMachine : StateMachine
     {
         [SerializeField] private Enemy enemy;
+
+        public Enemy Enemy => enemy;
         
         private Dictionary<EnemyStateType, IState> _stateHandlers;
         
@@ -16,9 +18,11 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates
             _stateHandlers = new Dictionary<EnemyStateType, IState>()
             {
                 { EnemyStateType.Idle, new EnemyIdleState(this) },
+                { EnemyStateType.Chase, new EnemyChaseState(this) },
+                { EnemyStateType.Attack, new EnemyAttackState(this) },
             };
 
-            ChangeStateByType(EnemyStateType.Idle);
+            ChangeStateByType(EnemyStateType.Chase);
         }
         
         public void ChangeStateByType(EnemyStateType enemyStateType)
