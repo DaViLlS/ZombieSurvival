@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemiesManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemiesManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Installers/GameLevelInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Installers/GameLevelInstaller.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EasyRoads3D scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EasyRoads3D.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/SceneContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/SceneContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Zombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Zombie.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyAttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/PistolM1911.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Weapons/PistolM1911.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +120,7 @@
       <workItem from="1737280702602" duration="5675000" />
       <workItem from="1737468470659" duration="1335000" />
       <workItem from="1737556973562" duration="1085000" />
-      <workItem from="1737790415933" duration="1370000" />
+      <workItem from="1737790415933" duration="3591000" />
     </task>
     <servers />
   </component>

@@ -1892,7 +1892,7 @@ Transform:
   m_GameObject: {fileID: 9031471658711327347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.83, y: 0.0000014305115, z: 5.01}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1924,8 +1924,6 @@ MonoBehaviour:
   - {fileID: 5808799867271395229}
   - {fileID: 8452562241450465688}
   - {fileID: 7861799794055254172}
-  chase: 0
-  walk: 0
   testingWaypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -1938,7 +1936,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  target: {fileID: 0}
   distanceToTarget: 2
 --- !u!95 &5115334826811819055
 Animator:

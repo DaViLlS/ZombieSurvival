@@ -1,13 +1,17 @@
 using System.Collections.Generic;
 using _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates;
 using _Project.Development.ZombieSurvivalCore.Health;
+using _Project.Development.ZombieSurvivalCore.MainCharacter;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 
 namespace _Project.Development.ZombieSurvivalCore.Enemies
 {
     public class Enemy : MonoBehaviour
     {
+        [Inject] private Character _character;
+        
         [SerializeField] private Animator animator;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private EnemyStateMachine enemyStateMachine;
@@ -16,14 +20,13 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
         [SerializeField] private List<Limb> limbs;
         
         [SerializeField] private List<Transform> testingWaypoints;
-        [SerializeField] private Transform target;
         [SerializeField] private float distanceToTarget;
 
         private HealthSystem _healthSystem;
         private int _currentPointIndex;
         private Transform _target;
 
-        public Transform Target => target;
+        public Transform Target => _target;
         public Animator Animator => animator;
         public NavMeshAgent NavMeshAgent => navMeshAgent;
         public float DistanceToTarget => distanceToTarget;
@@ -35,6 +38,8 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies
 
         public void Initialize()
         {
+            _target = _character.transform;
+            
             enemyStateMachine.Initialize();
             navMeshAgent.speed = speed;
             _healthSystem = new HealthSystem(health);
