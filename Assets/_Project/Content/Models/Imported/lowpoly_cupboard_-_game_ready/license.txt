@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lowpoly Cupboard - Game Ready
+* source:	https://sketchfab.com/3d-models/lowpoly-cupboard-game-ready-d7eaf8b1135a4c17a41953b093f9bb93
+* author:	Rashad Ibrahimli (https://sketchfab.com/rashad-ibrahimli)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lowpoly Cupboard - Game Ready" (https://sketchfab.com/3d-models/lowpoly-cupboard-game-ready-d7eaf8b1135a4c17a41953b093f9bb93) by Rashad Ibrahimli (https://sketchfab.com/rashad-ibrahimli) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Beer pub kiosk (Pivnaya)
+* source:	https://sketchfab.com/3d-models/beer-pub-kiosk-pivnaya-7bbccf02002847b49c004b0e1f98366d
+* author:	vanok179 (https://sketchfab.com/vanok179)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Beer pub kiosk (Pivnaya)" (https://sketchfab.com/3d-models/beer-pub-kiosk-pivnaya-7bbccf02002847b49c004b0e1f98366d) by vanok179 (https://sketchfab.com/vanok179) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

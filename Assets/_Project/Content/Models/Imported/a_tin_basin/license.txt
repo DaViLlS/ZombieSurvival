@@ -1,0 +1,11 @@
+Model Information:
+* title:	A tin basin
+* source:	https://sketchfab.com/3d-models/a-tin-basin-d9921fc7583f4fa9a5e0aa73348f1bac
+* author:	BlinFriend (https://sketchfab.com/BlinFriend)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "A tin basin" (https://sketchfab.com/3d-models/a-tin-basin-d9921fc7583f4fa9a5e0aa73348f1bac) by BlinFriend (https://sketchfab.com/BlinFriend) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

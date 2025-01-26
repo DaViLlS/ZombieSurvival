@@ -1,0 +1,106 @@
+fileFormatVersion: 2
+guid: 1d702716ecd06d0469a7f432c5c6343d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\scene.bin
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\scene.bin
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__247_baseColor.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__247_baseColor.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__247_normal.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__247_normal.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__250_baseColor.jpeg
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__250_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__250_metallicRoughness.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__250_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__250_normal.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__250_normal.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__251_baseColor.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__251_baseColor.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__251_metallicRoughness.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__251_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__251_normal.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__251_normal.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__44_baseColor.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__44_baseColor.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__44_metallicRoughness.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__44_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__44_normal.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__44_normal.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__45_baseColor.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__45_baseColor.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__45_metallicRoughness.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__45_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__45_normal.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__45_normal.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__46_baseColor.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__46_baseColor.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__46_metallicRoughness.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__46_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__46_normal.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__46_normal.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__48_baseColor.jpeg
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__48_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__48_metallicRoughness.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__48_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__49_baseColor.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__49_baseColor.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__49_metallicRoughness.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__49_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__49_normal.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__49_normal.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__51_baseColor.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__51_baseColor.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__51_metallicRoughness.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__51_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__51_normal.png
+    assetPath: Assets\_Project\Content\Prefabs\VillageProps\destroyed_house\textures\Material__51_normal.png
+  reportItems: []

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Soviet sofa
+* source:	https://sketchfab.com/3d-models/soviet-sofa-15df13d15d9b43ad98ed02bb39d1e7a7
+* author:	BlinFriend (https://sketchfab.com/BlinFriend)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Soviet sofa" (https://sketchfab.com/3d-models/soviet-sofa-15df13d15d9b43ad98ed02bb39d1e7a7) by BlinFriend (https://sketchfab.com/BlinFriend) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
