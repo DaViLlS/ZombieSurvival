@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using _Project.Development.Core.PlayerInput;
 using _Project.Development.Core.StateMachine;
-using _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.States;
+using _Project.Development.ZombieSurvivalCore.Persons.MainCharacter.CharacterStates.States;
 using UnityEngine;
 using Zenject;
 
-namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates
+namespace _Project.Development.ZombieSurvivalCore.Persons.MainCharacter.CharacterStates
 {
     public class CharacterStateMachine : StateMachine
     {

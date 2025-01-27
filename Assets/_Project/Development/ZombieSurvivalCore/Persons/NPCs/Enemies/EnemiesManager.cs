@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using _Project.Development.Core.Pause;
-using _Project.Development.ZombieSurvivalCore.MainCharacter;
+using _Project.Development.ZombieSurvivalCore.Persons.MainCharacter;
 using UnityEngine;
 using Zenject;
 
-namespace _Project.Development.ZombieSurvivalCore.Enemies
+namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies
 {
     public class EnemiesManager : MonoBehaviour, IPauseable
     {

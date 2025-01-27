@@ -1,5 +1,5 @@
 using _Project.Development.Core.PlayerInput;
-using _Project.Development.ZombieSurvivalCore.MainCharacter;
+using _Project.Development.ZombieSurvivalCore.Persons.MainCharacter;
 using UnityEngine;
 using Zenject;
 

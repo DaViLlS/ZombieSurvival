@@ -1,9 +1,9 @@
 using _Project.Development.Core.StateMachine;
 using UnityEngine;
 
-namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.States
+namespace _Project.Development.ZombieSurvivalCore.Persons.MainCharacter.CharacterStates.States
 {
-    public class CharacterJumpState : IState
+    public class CharacterRunState : IState
     {
         private CharacterStateMachine _stateMachine;
         private float _currentSpeed;
@@ -11,24 +11,30 @@ namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.
         private Rigidbody Rigidbody => _stateMachine.Character.Rigidbody;
         private Transform Transform => _stateMachine.Character.transform;
 
-        public CharacterJumpState(CharacterStateMachine stateMachine)
+        public CharacterRunState(CharacterStateMachine stateMachine)
         {
             _stateMachine = stateMachine;
-            _currentSpeed = _stateMachine.Character.MovementSettings.Speed;
+            _currentSpeed = _stateMachine.Character.MovementSettings.ShiftSpeed;
         }
 
         public void OnEnterState()
         {
-            Rigidbody.AddForce(Vector3.up * 5f, ForceMode.Impulse);
-            _stateMachine.Character.OnCharacterGrounded += OnCharacterGrounded;
+            _stateMachine.InputHandler.OnShiftCancelled += OnShiftCancelled;
+            _stateMachine.InputHandler.OnJumpPerformed += OnJumpPerformed;
         }
 
         public void OnExitState()
         {
-            _stateMachine.Character.OnCharacterGrounded -= OnCharacterGrounded;
+            _stateMachine.InputHandler.OnShiftCancelled -= OnShiftCancelled;
+            _stateMachine.InputHandler.OnJumpPerformed -= OnJumpPerformed;
         }
 
-        private void OnCharacterGrounded()
+        private void OnJumpPerformed()
+        {
+            _stateMachine.ChangeStateByType(CharacterStateType.Jump);
+        }
+
+        private void OnShiftCancelled()
         {
             if (_stateMachine.InputHandler.IsMovementPerformed)
             {
@@ -42,6 +48,7 @@ namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates.
 
         public void Execute()
         {
+        
         }
 
         public void FixedExecute()

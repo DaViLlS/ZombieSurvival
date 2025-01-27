@@ -1,4 +1,4 @@
-namespace _Project.Development.ZombieSurvivalCore.MainCharacter.CharacterStates
+namespace _Project.Development.ZombieSurvivalCore.Persons.MainCharacter.CharacterStates
 {
     public enum CharacterStateType
     {

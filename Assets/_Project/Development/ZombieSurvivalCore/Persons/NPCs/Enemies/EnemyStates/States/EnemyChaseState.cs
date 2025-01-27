@@ -1,7 +1,7 @@
 using _Project.Development.Core.StateMachine;
 using UnityEngine;
 
-namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
+namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies.EnemyStates.States
 {
     public class EnemyChaseState : IState
     {
@@ -38,9 +38,6 @@ namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States
             }
         }
 
-        public void FixedExecute()
-        {
-            
-        }
+        public void FixedExecute() { }
     }
 }

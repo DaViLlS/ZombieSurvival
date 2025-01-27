@@ -1,6 +1,6 @@
 using _Project.Development.Core.UIBase;
-using _Project.Development.ZombieSurvivalCore.Enemies;
-using _Project.Development.ZombieSurvivalCore.MainCharacter;
+using _Project.Development.ZombieSurvivalCore.Persons.MainCharacter;
+using _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies;
 using UnityEngine;
 using Zenject;
 

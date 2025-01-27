@@ -1,5 +1,6 @@
 using System;
 using _Project.Development.Core.Pause;
+using _Project.Development.Core.PersonsCore;
 using _Project.Development.Core.PlayerInput;
 using _Project.Development.Core.StateMachine;
 using _Project.Development.Core.UIBase;
@@ -9,9 +10,9 @@ using _Project.Development.ZombieSurvivalCore.Health;
 using UnityEngine;
 using Zenject;
 
-namespace _Project.Development.ZombieSurvivalCore.MainCharacter
+namespace _Project.Development.ZombieSurvivalCore.Persons.MainCharacter
 {
-    public class Character : MonoBehaviour, IDamageable, IPauseable
+    public class Character : BasePerson, IDamageable, IPauseable
     {
         [Inject] private InputHandler _inputHandler;
         [Inject] private UISystem _uiSystem;

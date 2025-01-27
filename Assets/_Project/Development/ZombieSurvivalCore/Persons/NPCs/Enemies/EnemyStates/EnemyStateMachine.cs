@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using _Project.Development.Core.StateMachine;
-using _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates.States;
+using _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies.EnemyStates.States;
 using UnityEngine;
 
-namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates
+namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies.EnemyStates
 {
     public class EnemyStateMachine : StateMachine
     {

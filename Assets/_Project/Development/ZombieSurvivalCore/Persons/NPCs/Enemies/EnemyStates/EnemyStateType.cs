@@ -1,4 +1,4 @@
-namespace _Project.Development.ZombieSurvivalCore.Enemies.EnemyStates
+namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies.EnemyStates
 {
     public enum EnemyStateType
     {
