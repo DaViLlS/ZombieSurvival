@@ -22,7 +22,7 @@ namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies.EnemyStat
                 { EnemyStateType.Attack, new EnemyAttackState(this) },
             };
 
-            ChangeStateByType(EnemyStateType.Chase);
+            ChangeStateByType(EnemyStateType.Idle);
         }
         
         public void ChangeStateByType(EnemyStateType enemyStateType)

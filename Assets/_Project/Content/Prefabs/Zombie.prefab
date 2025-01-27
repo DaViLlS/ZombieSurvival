@@ -886,6 +886,56 @@ Transform:
   - {fileID: 707110485321318302}
   m_Father: {fileID: 2308226997486536583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5607008333360545379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4088614373330802072}
+  - component: {fileID: 8449494990449981141}
+  m_Layer: 0
+  m_Name: Eyes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4088614373330802072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5607008333360545379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.179, z: 0.422}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5169661350511206556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8449494990449981141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5607008333360545379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bc1fa2912a4c33a0269dc01fe27cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEyes: {fileID: 4088614373330802072}
+  visibleAngle: 90
+  visibleDistance: 200
+  visibleMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &5630856530052369907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,6 +1946,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4088614373330802072}
   - {fileID: 5616034758540975850}
   - {fileID: 6096338892394467859}
   m_Father: {fileID: 0}
@@ -1912,9 +1963,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e71638a106f47e68939e8bf5ad82950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visiblePoints: []
   animator: {fileID: 5115334826811819055}
   navMeshAgent: {fileID: 4087442415978493120}
   enemyStateMachine: {fileID: 3467037883136139845}
+  enemyVision: {fileID: 8449494990449981141}
   speed: 1
   health: 100
   damage: 20

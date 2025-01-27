@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64814045226388720}
   - component: {fileID: 82443586349105078}
   - component: {fileID: 65067006206923290}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 4590503849579502}
   - component: {fileID: 33958776287099550}
   - component: {fileID: 23231982522414246}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Toilet_lock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

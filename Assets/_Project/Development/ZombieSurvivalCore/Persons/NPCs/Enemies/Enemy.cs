@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using _Project.Development.Core.Pause;
 using _Project.Development.Core.PersonsCore;
@@ -12,11 +13,13 @@ namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies
 {
     public class Enemy : BasePerson, IPauseable
     {
+        public  event Action OnDeath;
         [Inject] private Character _character;
         
         [SerializeField] private Animator animator;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private EnemyStateMachine enemyStateMachine;
+        [SerializeField] private EnemyVision enemyVision;
         [SerializeField] private float speed;
         [SerializeField] private float health;
         [SerializeField] private float damage;
@@ -32,6 +35,7 @@ namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies
         public Transform Target => _target;
         public Animator Animator => animator;
         public NavMeshAgent NavMeshAgent => navMeshAgent;
+        public EnemyVision EnemyVision => enemyVision;
         public float DistanceToTarget => distanceToTarget;
         public float Damage => damage;
 
@@ -66,6 +70,7 @@ namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies
 
             if (_healthSystem.CurrentHealth <= 0)
             {
+                OnDeath?.Invoke();
                 Destroy(gameObject);
             }
         }

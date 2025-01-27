@@ -16,9 +16,18 @@ namespace _Project.Development.ZombieSurvivalCore.Persons.NPCs.Enemies.EnemyStat
         public void OnEnterState()
         {
             _enemyStateMachine.Enemy.Animator.SetBool("IsWalking", false);
+            Enemy.EnemyVision.OnCharacterDetected += OnCharacterDetected;
         }
 
-        public void OnExitState() { }
+        private void OnCharacterDetected()
+        {
+            _enemyStateMachine.ChangeStateByType(EnemyStateType.Chase);
+        }
+
+        public void OnExitState()
+        {
+            Enemy.EnemyVision.OnCharacterDetected -= OnCharacterDetected;
+        }
         
         public void Execute() { }
 

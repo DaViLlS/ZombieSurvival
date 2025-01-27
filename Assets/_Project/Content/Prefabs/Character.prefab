@@ -275,6 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a69b856e80fdb844a5279cce85e2422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visiblePoints:
+  - {fileID: 340353086499029616}
   rb: {fileID: 6298614224189513511}
   stateMachine: {fileID: 8566851944355699560}
   characterMovementSettings: {fileID: 11400000, guid: 451a8b3c125dc704e82075a37ecc2b08, type: 2}

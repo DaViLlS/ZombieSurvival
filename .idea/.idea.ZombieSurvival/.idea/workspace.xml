@@ -5,63 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/AiSensorBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/AiSensorBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/ViewUtility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/ViewUtility.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/BasePerson.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/BasePerson.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcHearling.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcHearling.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcVision.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcVision.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyVision.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/Pause/GamePause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/Pause/GamePause.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/FirstPersonCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/FirstPersonCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemiesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemiesManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemiesManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/Enemy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/EnemyStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/EnemyStateMachine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/EnemyStateType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/EnemyStateType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/EnemyStateType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyAttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyAttackState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyAttackState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyChaseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyChaseState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyChaseState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyIdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyIdleState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyWanderState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyWanderState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Enemies/EnemyStates/States/EnemyWanderState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyWanderState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Installers/GameLevelInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Installers/GameLevelInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/Character.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/Character.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterSettings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterSettings.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterSettings/CharacterMovementSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterSettings/CharacterMovementSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterSettings/CharacterMovementSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterSettings/CharacterMovementSettings.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/CharacterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/CharacterStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/CharacterStateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/CharacterStateMachine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/CharacterStateType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/CharacterStateType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/CharacterStateType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/CharacterStateType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States/CharacterIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterIdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States/CharacterIdleState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterJumpState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States/CharacterJumpState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterJumpState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States/CharacterJumpState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States/CharacterMovementState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterMovementState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States/CharacterMovementState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterRunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States/CharacterRunState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/MainCharacter/CharacterStates/States/CharacterRunState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/MainCharacter/CharacterStates/States/CharacterRunState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Buildings and furniture/Hut/Prefabs/Toilet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings and furniture/Hut/Prefabs/Toilet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Zombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Zombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/AI.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/AiSensorBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/AiSensorBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/ViewUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/AI/ViewUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/ViewUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/AI/ViewUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/EnemyStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcHearling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyHearling.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcHearling.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyHearling.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcVision.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcVision.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyVision.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,13 +96,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20212">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="20212" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -170,7 +133,7 @@
       <workItem from="1737556973562" duration="1085000" />
       <workItem from="1737790415933" duration="3666000" />
       <workItem from="1737795568530" duration="24841000" />
-      <workItem from="1737983586107" duration="4844000" />
+      <workItem from="1737983586107" duration="7343000" />
     </task>
     <servers />
   </component>
@@ -186,5 +149,37 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyVision.cs</url>
+          <line>44</line>
+          <properties documentPath="D:\GitHub\ZombieSurvival\Assets\_Project\Development\ZombieSurvivalCore\Persons\NPCs\Enemies\EnemyVision.cs" containingFunctionPresentation="Method 'IsCharacterVisible'">
+            <startOffsets>
+              <option value="1370" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1478" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/AI/ViewUtility.cs</url>
+          <line>8</line>
+          <properties documentPath="D:\GitHub\ZombieSurvival\Assets\_Project\Development\Core\PersonsCore\AI\ViewUtility.cs" containingFunctionPresentation="Method 'IsVisibleUnit'">
+            <startOffsets>
+              <option value="271" />
+            </startOffsets>
+            <endOffsets>
+              <option value="290" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
