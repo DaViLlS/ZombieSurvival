@@ -1,0 +1,11 @@
+Model Information:
+* title:	Worn garden table (LowPoly)
+* source:	https://sketchfab.com/3d-models/worn-garden-table-lowpoly-4febe1eec0a5419a8816ac7f30aa9189
+* author:	toxiccrack (https://sketchfab.com/toxiccrack)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Worn garden table (LowPoly)" (https://sketchfab.com/3d-models/worn-garden-table-lowpoly-4febe1eec0a5419a8816ac7f30aa9189) by toxiccrack (https://sketchfab.com/toxiccrack) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
