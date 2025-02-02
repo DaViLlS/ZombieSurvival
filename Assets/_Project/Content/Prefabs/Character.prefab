@@ -770,15 +770,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 2246397130987450397}
+  firstPersonCamera: {fileID: 1801575805880837546}
   bobSpeed: 0.2
   bobAmount: 0.04
   midpoint: 0
   shootShakeDuration: 0.1
   shootShakeMagnitude: 0.1
   shootShakeNoise: 100
-  jumpShakeDuration: 0.1
-  jumpAngleDeg: 0.1
-  jumpDirection: 100
+  jumpShakeDuration: 0.15
+  jumpAngleDeg: 2
+  jumpDirection: {x: 0.1, y: 0}
 --- !u!114 &8278800075228841293
 MonoBehaviour:
   m_ObjectHideFlags: 0

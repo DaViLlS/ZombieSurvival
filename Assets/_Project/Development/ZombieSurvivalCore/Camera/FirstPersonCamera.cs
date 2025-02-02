@@ -11,12 +11,6 @@ namespace _Project.Development.ZombieSurvivalCore.Camera
 
         [SerializeField] private Character character;
 
-        private float _rotationX;
-        private float _rotationY;
-        
-        public float RotationX => _rotationX;
-        public float RotationY => _rotationY;
-
         void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -24,13 +18,8 @@ namespace _Project.Development.ZombieSurvivalCore.Camera
 
         private void Update()
         {
-            _rotationX -= _inputHandler.MouseYAxis;
-            _rotationX = Mathf.Clamp(_rotationX, -90f, 90f);
-
-            transform.localRotation = Quaternion.Euler(_rotationX, transform.localRotation.y, transform.localRotation.z);
-
-            _rotationY += _inputHandler.MouseXAxis;
-            character.transform.localRotation = Quaternion.Euler(character.transform.localRotation.x, _rotationY, character.transform.localRotation.z);
+            transform.Rotate(Vector3.left, _inputHandler.MouseYAxis, Space.Self); // Вращение по вертикали
+            character.transform.Rotate(Vector3.up, _inputHandler.MouseXAxis, Space.World); // Вращение по горизонтали
         }
 
         public void Pause()

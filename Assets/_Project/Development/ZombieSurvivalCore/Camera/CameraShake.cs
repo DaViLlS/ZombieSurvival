@@ -23,8 +23,8 @@ namespace _Project.Development.ZombieSurvivalCore.Camera
         [SerializeField] private float shootShakeNoise;
         [Header("Camera Jump Shake")]
         [SerializeField] private float jumpShakeDuration;
-        [SerializeField] private float jumpAngleDeg;
-        [SerializeField] private Vector2 jumpDirection;
+        [SerializeField] private float jumpShakeMagnitude;
+        [SerializeField] private float jumpShakeNoise;
         
         private float timer;
 
@@ -41,46 +41,17 @@ namespace _Project.Development.ZombieSurvivalCore.Camera
         private void OnCharacterGrounded()
         {
             character.OnCharacterGrounded -= OnCharacterGrounded;
-            ShakeRotateCamera(0.15f, 2, new Vector2(0.1f, 0f) + Vector2.down);
+            ShakeCamera(jumpShakeDuration, jumpShakeMagnitude, jumpShakeNoise);
         }
         
         private void PerformShootShake()
         {
             ShakeCamera(shootShakeDuration, shootShakeMagnitude, shootShakeNoise);
         }
-        
-        public void ShakeRotateCamera(float duration, float angleDeg, Vector2 direction)
-        {
-            StartCoroutine(ShakeRotateRoutine(duration, angleDeg, direction));
-        }
 
         public void ShakeCamera(float duration, float magnitude, float noise)
         {
             StartCoroutine(CameraShakeRoutine(duration, magnitude, noise));
-        }
-
-        private IEnumerator ShakeRotateRoutine(float duration, float angleDeg, Vector2 direction)
-        {
-            var elapsed = 0f;
-            var startRotation = transform.localRotation;
-            var halfDuration = duration / 2f;
-            direction = direction.normalized;
-
-            while (elapsed < duration)
-            {
-                var currentDirection = direction;
-                var t = elapsed < halfDuration ? elapsed / halfDuration : (duration - elapsed) / halfDuration;
-                var currentAngle = Mathf.Lerp(0f, angleDeg, t);
-                currentDirection *= Mathf.Tan(currentAngle * Mathf.Deg2Rad);
-                var resDirection = ((Vector3)currentDirection + Vector3.forward).normalized;
-                var newRotation = Quaternion.FromToRotation(Vector3.forward, resDirection);
-                transform.localRotation = Quaternion.Euler(firstPersonCamera.RotationX, newRotation.y, newRotation.z);
-                
-                elapsed += Time.deltaTime;
-                yield return null;
-            }
-            
-            transform.localRotation = startRotation;
         }
 
         private IEnumerator CameraShakeRoutine(float duration, float magnitude, float noise)
