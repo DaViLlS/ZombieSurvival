@@ -932,10 +932,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentEyes: {fileID: 4088614373330802072}
   visibleAngle: 90
-  visibleDistance: 200
+  visibleDistance: 25
   visibleMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 257
 --- !u!1 &5630856530052369907
 GameObject:
   m_ObjectHideFlags: 0

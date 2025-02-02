@@ -13,6 +13,9 @@ namespace _Project.Development.ZombieSurvivalCore.Camera
 
         private float _rotationX;
         private float _rotationY;
+        
+        public float RotationX => _rotationX;
+        public float RotationY => _rotationY;
 
         void Start()
         {
@@ -24,10 +27,10 @@ namespace _Project.Development.ZombieSurvivalCore.Camera
             _rotationX -= _inputHandler.MouseYAxis;
             _rotationX = Mathf.Clamp(_rotationX, -90f, 90f);
 
-            transform.localRotation = Quaternion.Euler(_rotationX, 0f, 0f);
+            transform.localRotation = Quaternion.Euler(_rotationX, transform.localRotation.y, transform.localRotation.z);
 
             _rotationY += _inputHandler.MouseXAxis;
-            character.transform.localRotation = Quaternion.Euler(0f, _rotationY, 0f);
+            character.transform.localRotation = Quaternion.Euler(character.transform.localRotation.x, _rotationY, character.transform.localRotation.z);
         }
 
         public void Pause()

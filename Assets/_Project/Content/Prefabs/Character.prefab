@@ -769,9 +769,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cae59665a2c484f8cb54cc8da3cbad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 2246397130987450397}
   bobSpeed: 0.2
   bobAmount: 0.04
   midpoint: 0
+  shootShakeDuration: 0.1
+  shootShakeMagnitude: 0.1
+  shootShakeNoise: 100
+  jumpShakeDuration: 0.1
+  jumpAngleDeg: 0.1
+  jumpDirection: 100
 --- !u!114 &8278800075228841293
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,23 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyVision.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/ShakeType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/ShakeType.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Buildings and furniture/Hut/Prefabs/Toilet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Buildings and furniture/Hut/Prefabs/Toilet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Character.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Zombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Zombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/AI.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/AiSensorBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/AiSensorBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/ViewUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/AI/ViewUtility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/Core/AI/ViewUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/AI/ViewUtility.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/EnemyStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/EnemyStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyStates/States/EnemyIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcHearling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyHearling.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcHearling.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyHearling.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcVision.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/NpcVision.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyVision.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/CameraShake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/CameraShake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/FirstPersonCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/FirstPersonCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/NPCs/NpcVision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Terrain/TerrainLit.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -51,21 +42,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "zombie-wandering",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;zombie-wandering&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
@@ -96,10 +87,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20212">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12680">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="20212" />
+      <option name="pid" value="12680" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -133,13 +124,16 @@
       <workItem from="1737556973562" duration="1085000" />
       <workItem from="1737790415933" duration="3666000" />
       <workItem from="1737795568530" duration="24841000" />
-      <workItem from="1737983586107" duration="7343000" />
+      <workItem from="1737983586107" duration="8276000" />
+      <workItem from="1738434211547" duration="607000" />
+      <workItem from="1738486067107" duration="12671000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
@@ -149,37 +143,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Persons/NPCs/Enemies/EnemyVision.cs</url>
-          <line>44</line>
-          <properties documentPath="D:\GitHub\ZombieSurvival\Assets\_Project\Development\ZombieSurvivalCore\Persons\NPCs\Enemies\EnemyVision.cs" containingFunctionPresentation="Method 'IsCharacterVisible'">
-            <startOffsets>
-              <option value="1370" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1478" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Project/Development/Core/PersonsCore/AI/ViewUtility.cs</url>
-          <line>8</line>
-          <properties documentPath="D:\GitHub\ZombieSurvival\Assets\_Project\Development\Core\PersonsCore\AI\ViewUtility.cs" containingFunctionPresentation="Method 'IsVisibleUnit'">
-            <startOffsets>
-              <option value="271" />
-            </startOffsets>
-            <endOffsets>
-              <option value="290" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
