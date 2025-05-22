@@ -18,8 +18,8 @@ namespace _Project.Development.ZombieSurvivalCore.Camera
 
         private void Update()
         {
-            transform.Rotate(Vector3.left, _inputHandler.MouseYAxis, Space.Self); // Вращение по вертикали
-            character.transform.Rotate(Vector3.up, _inputHandler.MouseXAxis, Space.World); // Вращение по горизонтали
+            transform.Rotate(Vector3.left, _inputHandler.MouseYAxis, Space.Self);
+            character.transform.Rotate(Vector3.up, _inputHandler.MouseXAxis, Space.World);
         }
 
         public void Pause()

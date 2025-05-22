@@ -7,8 +7,8 @@
     <list default="true" id="e5338bda-4fee-45c9-8bf5-78e1e9c88c9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZombieSurvival/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/Prefabs/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/CameraShake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/CameraShake.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/FirstPersonCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Development/ZombieSurvivalCore/Camera/FirstPersonCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Village.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,15 +83,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12680">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="12680" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -122,7 +120,10 @@
       <workItem from="1737795568530" duration="24841000" />
       <workItem from="1737983586107" duration="8276000" />
       <workItem from="1738434211547" duration="607000" />
-      <workItem from="1738486067107" duration="14519000" />
+      <workItem from="1738486067107" duration="14582000" />
+      <workItem from="1739808864250" duration="1020000" />
+      <workItem from="1745293211930" duration="4329000" />
+      <workItem from="1746076568553" duration="59000" />
     </task>
     <servers />
   </component>

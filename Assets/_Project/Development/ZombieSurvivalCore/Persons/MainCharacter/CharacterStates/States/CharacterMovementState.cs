@@ -43,7 +43,7 @@ namespace _Project.Development.ZombieSurvivalCore.Persons.MainCharacter.Characte
 
         private void OnMovementCancelled()
         {
-            Rigidbody.velocity = Vector3.zero * _currentSpeed + new Vector3(0f, Rigidbody.velocity.y, 0f);
+            Rigidbody.linearVelocity = Vector3.zero * _currentSpeed + new Vector3(0f, Rigidbody.linearVelocity.y, 0f);
             _stateMachine.ChangeStateByType(CharacterStateType.Idle);
         }
 
@@ -54,7 +54,7 @@ namespace _Project.Development.ZombieSurvivalCore.Persons.MainCharacter.Characte
         public void FixedExecute()
         {
             var moveDirection = Transform.forward * _stateMachine.InputHandler.MovementVector.y + Transform.right * _stateMachine.InputHandler.MovementVector.x;
-            Rigidbody.velocity = moveDirection * _currentSpeed + new Vector3(0f, Rigidbody.velocity.y, 0f);
+            Rigidbody.linearVelocity = moveDirection * _currentSpeed + new Vector3(0f, Rigidbody.linearVelocity.y, 0f);
         }
     }
 }
